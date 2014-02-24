@@ -1,0 +1,98 @@
+Updating '.':
+U    NAND\System\App\CPen\cpen.exe
+
+Fetching external item into 'NAND\System\Messages\de':
+Updated external to revision 1073.
+
+
+Fetching external item into 'NAND\System\Messages\en':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\Messages\es':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\Messages\ja':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\Messages\ru':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\Messages\uk':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\Messages\pt':
+External at revision 1073.
+
+
+Fetching external item into 'DATA\My Books\Quick_Start_Guide.pdf':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\App\Help\help_09':
+External at revision 1073.
+
+
+Fetching external item into 'NAND\System\App\218\8K':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\VoiceVI\data':
+External at revision 138.
+
+At revision 1073.
+Updating '.':
+U    NAND\System\App\Launcher\asr_spanish.bin
+U    NAND\System\App\Launcher\topic_eng_2nd.bin
+U    NAND\System\App\Launcher\topic_eng_main.bin
+U    NAND\System\App\Launcher\topic_spa_2nd.bin
+U    NAND\System\App\Launcher\topic_spa_main.bin
+
+Fetching external item into 'NAND\System\App\VoiceVI\data':
+Updated external to revision 138.
+
+
+Fetching external item into 'NAND\System\App\FlashCards\FCB':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\FlashCards\Sound':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\PhraseBook\asr':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\PhraseBook\data':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\PhraseBook\sound':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\LT\tutordata':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\Hangman':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\MT':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\Oxford\OXFORD_ENG_SPA':
+External at revision 138.
+
+
+Fetching external item into 'NAND\System\App\Oxford\OXFORD_SPA_ENG':
+External at revision 138.
+
+At revision 1073.
