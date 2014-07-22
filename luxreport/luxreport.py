@@ -403,6 +403,12 @@ class Analizer(object):
                         self._scan(sdcard, data, True)
                         sd_size = Analizer._get_dir_size(sdcard)
                         data['sd_size'] = '%.2f GB' % (sd_size / 1e9)
+                elif f == 'sdcard.tar.gz':
+                    with TempDir(path) as sdcard:
+                        Analizer._unpack_tgz(os.path.join(path, f), sdcard)
+                        self._scan(sdcard, data, True)
+                        sd_size = Analizer._get_dir_size(sdcard)
+                        data['sd_size'] = '%.2f GB' % (sd_size / 1e9)
 
                 if ext == ".apk":
                     a, b = Analizer._get_application(f)
@@ -498,7 +504,7 @@ class Analizer(object):
 
     @staticmethod
     def _get_application(filename):
-        ectaco = """Crossword Dictionary EngLessons.apk FlashCards grammar Hangman
+        ectaco = """Catalog Crossword Dictionary EngLessons.apk FlashCards grammar Hangman
         Idioms IrregularVerbs JetbookReader.apk LT LTPW MT MTLauncher.apk Oxford PB
         PhotoText PhotoText PhotoTranslation PhotoTranslation PictDict.apk Sat.apk
         SpeedReading.apk ULearn ULearn2 Usatest.apk UT.apk
@@ -522,9 +528,11 @@ class Analizer(object):
         VisualizationWallpapers.apk VpnDialogs.apk VpnServices.apk WAPPushManager.apk VoiceSearchStub.apk
         Superuser.apk SetupWizard.apk RootExplorer.apk LatinImeDictionaryPack.apk InputDevices.apk
         GoogleEars.apk GoogleQuickSearchBoxJB.apk FusedLocation.apk ConnectivityManagerTest.apk
-        BasicDreams.apk AppWizardService.apk
+        BasicDreams.apk AppWizardService.apk ChromeBookmarksSyncAdapter.apk GoogleCalendarSyncAdapter.apk
+        Settings.apk Downloads.apk Exchange2.apk
         """
-        appnames = {"1MobileMarket.apk": "1 Mobile Market", "ApplicationsProvider.apk": "Search Applications Provider",
+        appnames = {"Catalog.apk": "Ectaco: All languages",
+                    "1MobileMarket.apk": "1 Mobile Market", "ApplicationsProvider.apk": "Search Applications Provider",
                     "bbc.mobile.news.ww.apk": "BBC News", "Browser.apk": "Internet",
                     "CalendarProvider.apk": "Calendar Storage", "CertInstaller.apk": "Certificate Installer",
                     "com.adobe.flashplayer-2.apk": "Adobe Flash Player 11.1",
@@ -632,7 +640,22 @@ class Analizer(object):
         os.system('sync')
         try:
             os.chdir(dst)
-            os.system("p7zip -d %s  >/dev/null 2>&1" % name)
+            os.system('p7zip -d %s  >/dev/null 2>&1' % name)
+        except FileNotFoundError as err:
+            logger.error(err)
+
+
+    @staticmethod
+    def _unpack_tgz(src, dst):
+        assert os.access(src, os.F_OK), 'file not found'
+        assert os.path.isdir(dst), 'invalid directory'
+        name = os.path.basename(src)
+        shutil.move(src, os.path.join(dst, name))
+        os.system('sync')
+        try:
+            os.chdir(dst)
+            os.system('tar xzf %s' % name)
+            os.remove(name)
         except FileNotFoundError as err:
             logger.error(err)
 
@@ -1061,7 +1084,7 @@ Size: {0.sd_size}
             for i, release in enumerate(self.values()):
                 buff = list()
                 buff.append('<tr>\n<td align="right">%i</td>' % (i + 1))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.project_id))
+                buff.append('<td><a href="ftp://backbsd.ectaco.ru/Lux/%s">%s</a></td>' % (release.project_id, xml.sax.saxutils.escape(release.project_id)))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.project_model))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.apps_ectaco))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.apps_other))
