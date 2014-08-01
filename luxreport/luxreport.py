@@ -1084,7 +1084,12 @@ Size: {0.sd_size}
             for i, release in enumerate(self.values()):
                 buff = list()
                 buff.append('<tr>\n<td align="right">%i</td>' % (i + 1))
-                buff.append('<td><a href="ftp://backbsd.ectaco.ru/Lux/%s">%s</a></td>' % (release.project_id, xml.sax.saxutils.escape(release.project_id)))
+                if release.project_id[:3] == 'lux':
+                    buff.append('<td><a href="ftp://backbsd.ectaco.ru/Lux/%s">%s</a></td>' % (release.project_id, xml.sax.saxutils.escape(release.project_id)))
+                elif release.project_id[:3] == 'SG_':
+                    buff.append('<td><a href="ftp://backbsd.ectaco.ru/Runbo/%s">%s</a></td>' % (release.project_id, xml.sax.saxutils.escape(release.project_id)))
+                else:
+                    buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.project_id))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.project_model))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.apps_ectaco))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.apps_other))
