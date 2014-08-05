@@ -15,6 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+# - Requirement: All must be in a single file!
+# - OK
+
 import collections
 import copy
 import json
@@ -30,7 +33,7 @@ import xml.dom.minidom
 import xml.etree.ElementTree
 import xml.sax.saxutils
 
-
+# take it from /our/wiki/pmwiki.php/NSG/LangId
 langs = {"ar": ("arabic", 1, "ara"), "bg": ("bulgarian", 2, "bul"), "bs": ("bosnian", 46, "bos"),
          "cs": ("czech", 5, "cze"), "da": ("danish", 6, "dan"), "de": ("german", 7, "deu"), "el": ("greek", 8, "gre"),
          "en": ("english", 9, "eng"), "es": ("spanish", 10, "spa"), "et": ("estonian", 37, "est"),
@@ -45,6 +48,7 @@ langs = {"ar": ("arabic", 1, "ara"), "bg": ("bulgarian", 2, "bul"), "bs": ("bosn
          "th": ("thai", 30, "tha"), "tl": ("tagalog", 53, "tgl"), "tr": ("turkish", 31, "tur"),
          "uk": ("ukrainian", 34, "ukr"), "vi": ("vietnamese", 42, "vie"), "zh": ("chinese", 4, "chi")}
 
+# It's logger and I've use it instead of print.
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
@@ -633,11 +637,8 @@ class Analizer(object):
         assert os.path.isdir(dst), 'invalid directory'
         ext = os.path.splitext(src)[1].lower()
         assert ext in ('.exe', '.7z'), 'The "%s" is not a format. Known formats are EXE and 7Z.' % ext
-        name = os.path.basename(src)
-        if ext == '.exe':
-            name = os.path.basename(".".join((str(os.path.splitext(src)[0]), "7z")))
-        shutil.copy(src, os.path.join(dst, name))
-        os.system('sync')
+        name =  os.path.basename(".".join((os.path.splitext(src)[0], "7z"))) if ext == '.exe' else os.path.basename(src)
+        os.system('ln -s {what} {where}'.format(what=src, where=os.path.join(dst, name)))
         try:
             os.chdir(dst)
             os.system('p7zip -d %s  >/dev/null 2>&1' % name)
@@ -1052,6 +1053,10 @@ Size: {0.sd_size}
 
 
     def export_html(self, filename):
+        def nonBreakFix(str):
+            items=str.split(', ')
+            result = ', '.join([i.replace(' ', '&nbsp;').replace('-', '&#8209;') for i in items])
+            return result
         page_header = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -1084,25 +1089,25 @@ Size: {0.sd_size}
             for i, release in enumerate(self.values()):
                 buff = list()
                 buff.append('<tr>\n<td align="right">%i</td>' % (i + 1))
-                if release.project_id[:3] == 'lux':
+                if release.project_id.startswith('lux2'):
                     buff.append('<td><a href="ftp://backbsd.ectaco.ru/Lux/%s">%s</a></td>' % (release.project_id, xml.sax.saxutils.escape(release.project_id)))
-                elif release.project_id[:3] == 'SG_':
+                elif release.project_id.startswith('SG_'):
                     buff.append('<td><a href="ftp://backbsd.ectaco.ru/Runbo/%s">%s</a></td>' % (release.project_id, xml.sax.saxutils.escape(release.project_id)))
                 else:
                     buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.project_id))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.project_model))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.apps_ectaco))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.apps_other))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.voice_dictionary))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.voice_phrasebook))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.apps_ectaco)))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.apps_other)))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.voice_dictionary)))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.voice_phrasebook)))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.photo_text))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.ulearn))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.ulearn2))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.ulearn)))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.ulearn2)))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.feature_tts))
                 buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.feature_sr))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.feature_gt))
-                buff.append('<td>%s</td>' % xml.sax.saxutils.escape(release.feature_jibbigo))
-                buff.append('<td align="center" class="dimmed">%s</td>' % xml.sax.saxutils.escape(release.sd_size))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.feature_gt)))
+                buff.append('<td>%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.feature_jibbigo)))
+                buff.append('<td align="center" class="dimmed">%s</td>' % nonBreakFix(xml.sax.saxutils.escape(release.sd_size)))
                 buff.append('\n</tr>')
                 fp.write(table_header + '\n'.join(buff))
             fp.write('</table>\n</body>\n</html>')
@@ -1151,9 +1156,6 @@ Size: {0.sd_size}
 
 
 def main():
-    # test = ReleaseCollection()
-    # test.refresh('/shares/releases/Lux/old', '/shares/releases/xml/testreport.xml')
-
     lux = ReleaseCollection()
     tlx = ReleaseCollection()
 
@@ -1167,4 +1169,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    if os.getuid() == 0:
+        main()
+    else:
+        logger.warning('You must be the root to use this script.')
