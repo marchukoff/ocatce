@@ -357,7 +357,7 @@ class Release(object):
 # noinspection PyCompatibility
 class Analizer(object):
     _lang_ext_gtlang = re.compile(r'c_(\w\w)_(\w\w)\.txt')
-    _lang_ext_jibbigo = re.compile(r's2s-mob-(\w\w).{4}(\w\w).{9}\.s2s')
+    _lang_ext_jibbigo = re.compile(r's2s(?:-mob)?-(\w\w).{4}(\w\w).{7,9}\.s2s')
     _lang_tv_snddict = re.compile('db_(\d\d?)_.+\.snd')
     _lang_tv_sndphrb = re.compile('phr_(\d\d)\.snd')
     _lang_ulearn = re.compile('DATA(\d\d)_(\d\d)')
@@ -434,7 +434,7 @@ class Analizer(object):
                         Analizer._unpack_7z(os.path.join(path, f), sdcard)
                         self._scan(sdcard, data, True)
                         data['sd_size'] = '%.2f GB' % Analizer._size_GB(sdcard)
-                elif f == 'sdcard.tar.gz':
+                elif f.endswith('.tar.gz'):
                     with TempDir(path) as sdcard:
                         Analizer._unpack_tgz(os.path.join(path, f), sdcard)
                         self._scan(sdcard, data, True)
