@@ -357,7 +357,8 @@ class Release(object):
 # noinspection PyCompatibility
 class Analizer(object):
     _lang_ext_gtlang = re.compile(r'c_(\w\w)_(\w\w)\.txt')
-    _lang_ext_jibbigo = re.compile(r's2s(?:-mob)?-(\w\w).{4}(\w\w).{7,9}\.s2s')
+    _lang_ext_jibbigo = re.compile(
+           r's2s(?:-mob)?-(\w\w).{4}(\w\w).{7,9}\.s2s')
     _lang_tv_snddict = re.compile('db_(\d\d?)_.+\.snd')
     _lang_tv_sndphrb = re.compile('phr_(\d\d)\.snd')
     _lang_ulearn = re.compile('DATA(\d\d)_(\d\d)')
@@ -803,6 +804,9 @@ class Analizer(object):
 
 # noinspection PyCompatibility
 class ReleaseCollection(dict):
+    _TESTING = re.compile('(eval|test)', re.IGNORECASE)
+    _LUX = 'ftp://backbsd.ectaco.ru/Lux'
+    _SG = 'ftp://backbsd.ectaco.ru/Runbo'
     _CSS_style = """
 body {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -1214,54 +1218,55 @@ Size: {0.sd_size}
         with open(filename, mode='w') as fp:
             fp.write(page_header)
             for i, release in enumerate(self.values()):
-                buff = list()
-                buff.append('<tr>\n<td align="right">%i</td>' % (i + 1))
-                if release.project_id.startswith('lux2'):
-                    buff.append(
-                     '<td><a href="ftp://backbsd.ectaco.ru/Lux/%s">%s</a></td>' %
-                        (release.project_id,
-                         xml.sax.saxutils.escape(release.project_id)))
+                t = list()
+                s = xml.sax.saxutils.escape(release.project_id)
+                t.append('<tr>\n<td align="right">%i</td>' % (i + 1))
+                if ReleaseCollection._TESTING.search(
+                  release.project_id) is not None:
+                    t.append('<td>%s</td>' %
+                        xml.sax.saxutils.escape(release.project_id))
+                elif release.project_id.startswith('lux2'):
+                    t.append('<td><a href="{0}">{1}</a></td>'.format(
+                             '/'.join((ReleaseCollection._LUX, s)), s))
                 elif release.project_id.startswith('SG_'):
-                    buff.append(
-                     '<td><a href="ftp://backbsd.ectaco.ru/Runbo/%s">%s</a></td>' %
-                        (release.project_id,
-                         xml.sax.saxutils.escape(release.project_id)))
+                    t.append('<td><a href="{0}">{1}</a></td>'.format(
+                             '/'.join((ReleaseCollection._SG, s)), s))
                 else:
-                    buff.append('<td>%s</td>' %
+                    t.append('<td>%s</td>' %
                                 xml.sax.saxutils.escape(release.project_id))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                             xml.sax.saxutils.escape(release.project_model))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                         nonBreakFix(
                             xml.sax.saxutils.escape(release.apps_ectaco)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                         nonBreakFix(
                             xml.sax.saxutils.escape(release.apps_other)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                         nonBreakFix(
                             xml.sax.saxutils.escape(release.voice_dictionary)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                         nonBreakFix(
                             xml.sax.saxutils.escape(release.voice_phrasebook)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                             xml.sax.saxutils.escape(release.photo_text))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                         nonBreakFix(xml.sax.saxutils.escape(release.ulearn)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                         nonBreakFix(xml.sax.saxutils.escape(release.ulearn2)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                             xml.sax.saxutils.escape(release.feature_tts))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                                 xml.sax.saxutils.escape(release.feature_sr))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                     nonBreakFix(xml.sax.saxutils.escape(release.feature_gt)))
-                buff.append('<td>%s</td>' %
+                t.append('<td>%s</td>' %
                     nonBreakFix(
                         xml.sax.saxutils.escape(release.feature_jibbigo)))
-                buff.append('<td align="center" class="dimmed">%s</td>' % 
+                t.append('<td align="center" class="dimmed">%s</td>' % 
                         nonBreakFix(xml.sax.saxutils.escape(release.sd_size)))
-                buff.append('\n</tr>')
-                fp.write(table_header + '\n'.join(buff))
+                t.append('\n</tr>')
+                fp.write(table_header + '\n'.join(t))
             fp.write('</table>\n</body>\n</html>')
 
 
@@ -1320,7 +1325,8 @@ def main():
          args=('/shares/releases/Lux', '/shares/releases/xml/luxreport.xml')))
     threads.append(
         threading.Thread(target=tlx.refresh,
-         args=('/shares/releases/Runbo', '/shares/releases/xml/tlxreport.xml')))
+         args=('/shares/releases/Runbo',
+               '/shares/releases/xml/tlxreport.xml')))
     for t in threads:
         t.start()
 
