@@ -29,7 +29,6 @@ import re
 import shutil
 import tempfile
 import textwrap
-import threading
 import xml.dom.minidom
 import xml.etree.ElementTree
 import xml.sax.saxutils
@@ -68,6 +67,13 @@ ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 ch.setFormatter(formatter)
 logger.addHandler(ch)
+
+
+class Settings(object):
+    tasks = dict()
+    f = os.path.join(os.path.dirname(__file__), 'luxreport_tasks.json')
+    with open(f) as fp:
+        tasks = json.load(fp)
 
 
 class AbstractDir(object):
@@ -118,7 +124,6 @@ class TempDir(AbstractDir):
 
 # noinspection PyCompatibility
 class ExtDir(AbstractDir):
-    _mutex = threading.Lock()
 
     def __init__(self, filename, mount_point='/shares/releases/xml'):
         self._filename = filename
@@ -126,7 +131,6 @@ class ExtDir(AbstractDir):
 
 
     def __enter__(self):
-        ExtDir._mutex.acquire()
         os.system('/usr/local/etc/rc.d/fusefs onestart && ext4fuse %s %s' % 
                   (self._filename, self._name))
         os.system('ls -m %s' % self._name)
@@ -138,10 +142,7 @@ class ExtDir(AbstractDir):
         command += ' || '.join(['/usr/local/etc/rc.d/fusefs {0}'.format(s)
                             for s in ('onestop', 'faststop', 'forcestop')])
         os.system(command)
-        try:
-            super().remove()
-        finally:
-            ExtDir._mutex.release()
+        super().remove()
 
 
 class Release(object):
@@ -552,179 +553,23 @@ class Analizer(object):
 
     @staticmethod
     def _get_application(filename):
-        ectaco = """Catalog Crossword Dictionary EngLessons.apk FlashCards
-        grammar Hangman Idioms IrregularVerbs JetbookReader.apk LT LTPW MT
-        MTLauncher.apk Oxford PB PhotoText PhotoText PhotoTranslation
-        PhotoTranslation PictDict.apk Sat.apk SpeedReading.apk ULearn ULearn2
-        Usatest.apk UT.apk
-        """
-        no_app = """AccountAndSyncSettings.apk ApplicationsProvider.apk
-        AtciService.apk BackupRestoreConfirmation.apk BackupTransport.apk
-        CalendarImporter.apk CalendarProvider.apk CDS_INFO.apk
-        CertInstaller.apk com.android.backupconfirm Contacts.apk
-        ContactsProvider.apk DefaultContainerService.apk Development.apk
-        dm.apk DownloadProvider.apk DrmProvider.apk EctacoLiveWallpaper.apk
-        EctacoLiveWallpaper_ics.apk EngineerCode.apk EngineerMode.apk
-        EngineerModeSim.apk Exchange.apk FBReaderJ-plugin-tts.apk
-        framework-res.apk Galaxy4.apk GestureBuilder.apk GmsCore.apk go.apk
-        GoogleBackupTransport.apk GoogleContactsSyncAdapter.apk
-        GoogleLoginService.apk GoogleLoginServiceICS GoogleLoginServiceICS.apk
-        GooglePartnerSetup.apk GoogleQuickSearchBox.apk
-        GoogleServicesFramework.apk GoogleServicesFrameworkICS.apk
-        HoloSpiralWallpaper.apk HTMLViewer.apk KeyChain.apk Launcher2.apk
-        LiveWallpapers.apk
-        LiveWallpapersPicker.apk LuxChk.apk LuxTtsService.apk
-        MagicSmokeWallpapers.apk MediaProvider.apk
-        mediatek-res.apk MediaTekLocationProvider.apk
-        MTKAndroidSuiteDaemon.apk MtkBt.apk MtkVideoLiveWallpaper.apk
-        MtkWorldClockWidget.apk MusicFX.apk NoiseField.apk
-        PackageInstaller.apk PhaseBeam.apk PicoTts.apk Protips.apk
-        Provision.apk QuickSearchBox.apk SettingsProvider.apk
-        SharedStorageBackup.apk Stk1.apk Stk2.apk SystemUI.apk
-        TelephonyProvider.apk theme-res-mint.apk theme-res-mocha.apk
-        theme-res-raspberry.apk TtsService.apk UserDictionaryProvider.apk
-        Velvet.apk VisualizationWallpapers.apk VpnDialogs.apk VpnServices.apk
-        WAPPushManager.apk VoiceSearchStub.apk Superuser.apk SetupWizard.apk
-        RootExplorer.apk LatinImeDictionaryPack.apk InputDevices.apk
-        GoogleEars.apk GoogleQuickSearchBoxJB.apk FusedLocation.apk
-        ConnectivityManagerTest.apk BasicDreams.apk AppWizardService.apk
-        ChromeBookmarksSyncAdapter.apk GoogleCalendarSyncAdapter.apk
-        Settings.apk Downloads.apk Exchange2.apk
-        """
-        appnames = {"Catalog.apk": "Ectaco: All languages",
-                    "1MobileMarket.apk": "1 Mobile Market",
-                    "ApplicationsProvider.apk": "Search Applications Provider",
-                    "bbc.mobile.news.ww.apk": "BBC News",
-                    "Browser.apk": "Internet",
-                    "CalendarProvider.apk": "Calendar Storage",
-                    "CertInstaller.apk": "Certificate Installer",
-                    "com.adobe.flashplayer-2.apk": "Adobe Flash Player 11.1",
-                    "com.adobe.reader-1.apk": "Adobe Reader",
-                    "com.alensw.PicFolder-1.apk": "QuickPic",
-                    "com.alphonso.pulse.apk": "Pulse",
-                    "com.badoo.mobile.apk": "Badoo",
-                    "com.bytesequencing.android.dominoes.apk": "Dominoes!",
-                    "com.facebook.katana-1.apk": "Facebook",
-                    "com.flyersoft.moonreader-1.apk": "Moon+ Reader",
-                    "com.fsck.k9-1.apk": "K-9 Mail",
-                    "com.google.android.apps.inputmethod.cantonese.apk":
-                                                    "Google Cantonese Input",
-                    "com.google.android.apps.inputmethod.hindi.apk":
-                                                        "Google Hindi Input",
-                    "com.google.android.apps.inputmethod.zhuyin.apk":
-                                                        "Google Zhuyin Input",
-                    "com.google.android.apps.translate-1.apk":
-                                                            "Google Translate",
-                    "com.google.android.chess.apk": "Chess",
-                    "com.google.android.inputmethod.japanese.apk":
-                                                    "Google Japanese Input",
-                    "com.google.android.inputmethod.korean.apk":
-                                                        "Google Korean Input",
-                    "com.google.android.inputmethod.latin.apk":
-                                                        "Google Keyboard",
-                    "com.google.android.inputmethod.pinyin.apk":
-                                                        "Google Pinyin Input",
-                    "com.google.android.voicesearch.apk": "Voice Search",
-                    "com.guardian.apk": "Guardian",
-                    "com.hi5.app.apk": "Hi5",
-                    "com.icenta.sudoku.apk": "Sudoku Free",
-                    "com.jayuins.mp3p_59.apk": "MePlayer Audio",
-                    "com.jibbigo.player-1.apk": "Jibbigo Translator",
-                    "com.klye.ime.latin.apk": "MultiLing Keyboard",
-                    "com.livejournal.client-1.apk": "LiveJournal",
-                    "com.magmamobile.game.checkers.apk": "Kings",
-                    "com.microsoft.bing.apk": "Bing",
-                    "com.mobilityware.solitaire.apk": "Solitaire",
-                    "com.rmf.apk": "RMFon.pl",
-                    "com.skype.raider-1.apk": "Skype",
-                    "com.twitter.android.apk": "Twitter",
-                    "com.vkontakte.android-1.apk": "Vkontakte",
-                    "com.weather.Weather-1.apk": "The Weather Channel",
-                    "com.workpail.inkpad.notepad.notes-1.apk": "Inkpad NotePad",
-                    "com.xuvi.pretoefl.apk": "TOEFL iBT Preparation",
-                    "com.zaggisworkshop.polishpress.apk": "Polska Prasa",
-                    'com.obreey.reader.apk': 'PocketBook Reader',
-                    'pl.pleng.russian-1.apk': 'Russian Translator',
-                    'biz.bookdesign.librivox-1.apk': 'LibriVox Audio Books',
-                    'com.anddoes.launcher-1.apk': 'Apex Launcher',
-                    'com.android.chrome-1.apk': 'Google Chrome',
-                    'com.easternspark.android.emergencynumbers-1.apk':
-                        'World Emergency Numbers',
-                    'com.ebay.mobile-1.apk': 'eBay',
-                    'com.google.android.youtube-1.apk': 'YouTube',
-                    'com.gsmdev.worldfactbook-1.apk': 'World Factbook',
-                    'com.klye.ime.latin_103.apk': 'MultiLing Keyboard',
-                    'com.tripadvisor.tripadvisor-1.apk': 'TripAdvisor',
-                    'com.triposo.droidguide.world-1.apk':
-                        'World Travel Guide by Triposo',
-                    'imoblife.androidsensorbox-1.apk': 'Android Sensor Box',
-                    "CPenService.apk": "C-Pen Core",
-                    "Crossword_ML.apk": "Linguistic Crossword",
-                    "DefaultContainerService.apk": "Package Access Helper",
-                    "Dictionary_Ml.apk": "Dictionary",
-                    "DictOnline.apk": "Dictionary Online",
-                    "DownloadProvider.apk": "Download Manager",
-                    "DownloadProviderUi.apk": "Downloads",
-                    "DrmProvider.apk": "DRM Protected Content Storage",
-                    "EMarket.apk": "ECTACO Market",
-                    "EngLessons.apk": "Video Courses 48 English Lessons",
-                    "es_file_explorer.apk": "ES File Explorer",
-                    "Exchange.apk": "Exchange Services",
-                    "FBReaderJ-plugin-tts.apk": "FBReader TTS plugin",
-                    "FBReaderJ.apk": "FBReader",
-                    "FlashCards_ML.apk":
- "Learning Settings, Linguistic FlashCards, Pockets, Spell-It-Right, Translation Test",
-                    "Gallery3D.apk": "Gallery", "Gazeta.apk": "Gazeta.Ru",
-                    "GmsCore.apk": "Google Play services",
-                    "go.apk": "Google Search",
-                    "GTranslate.apk": "Voice Translator",
-                    "Hangman_Ml.apk": "Vocabulary Builder",
-                    "Idioms_ML.apk": "Idioms",
-                    "IrregularVerbs_ML.apk": "Irregular Verbs",
-                    "JetbookReader.apk": "jetBook Reader",
-                    "LatinIME.apk": "Android Keyboard",
-                    "Launcher2.apk": "Launcher",
-                    "Leventhal.apk": "Video Courses",
-                    "LibRu.apk": "Russian Books Online",
-                    "LiveMocha.apk": "English Online",
-                    "LiveWallpapers.apk": "Android Live Wallpapers",
-                    "LT-ML.apk": "Language Teacher",
-                    "LTPW-ML.apk": "Language Teacher PixWord",
-                    "LuxChk.apk": "LuxSelfTest",
-                    "LuxTtsService.apk": "Lux TTS",
-                    "maildroid.apk": "MailDroid",
-                    "MediaProvider.apk": "Media Storage",
-                    "miyowa.android.microsoft.wlm.apk": "Messenger WithYou",
-                    "net.gordons.uscitizenship2011Edition.apk":
-                                        "US Citizenship Test 2012 Edition",
-                    "northern.captain.seabattle.apk": "Naval Clash",
-                    "org.wikipedia-1.apk": "Wikipedia",
-                    "Oxford_Eng-Eng.apk": "English Dictionary in English",
-                    "Oxford_Eng-Spa.apk": "English Dictionary in Spanish",
-                    "PB-ML.apk": "PhraseBook",
-                    "PhotoText-lux2.apk": "PhotoText",
-                    "PhotoTranslation-lux2.apk": "Photo Translator",
-                    "PictDict.apk": "Picture Dictionary",
-                    "pl.allegro.apk": "Allegro", "pl.gadugadu.apk": "GG",
-                    "pl.onet.onethd.apk": "Onet News",
-                    "ru.odnoklassniki.android-1.apk": "Odnoklassniki",
-                    "ru.yandex.searchplugin-1.apk": "Yandex Search",
-                    "Rurem.apk": "Russian TV and Video",
-                    "Sat.apk": "SAT/TOEFL",
-                    "SpeedReading.apk": "SpeedReading Course",
-                    "Talk.apk": "Google Talk",
-                    "tunein.player-1.apk": "TuneIn Radio",
-                    "ULearn2_Ml.apk": "U-Learn Advanced",
-                    "ULearn_Ml.apk": "U-Learn",
-                    "Usatest.apk": "USA Interview",
-                    "UT.apk": "Universal Translator",
-                    "Vending.apk": "Google Play Store",
-                    "VideoEditor.apk": "Movie Studio",
-                    "Webinar.apk": "English Language Webinar"}
-        blacklog = set(no_app.split())
+        blacklog = set()
+        suite = set()
+        appnames = dict()
+        f = os.path.join(os.path.dirname(__file__), 'luxreport_blacklog.json')
+        assert os.access(f, os.F_OK), 'file not found'
+        with open(f) as fp:
+            blacklog = set(json.load(fp))
         if filename in blacklog:
             return ('', '')
-        suite = set(ectaco.split())
+        f = os.path.join(os.path.dirname(__file__), 'luxreport_ectaco.json')        
+        assert os.access('luxreport_ectaco.json', os.F_OK), 'file not found'
+        with open(f) as fp:
+            suite = set(json.load(fp))
+        f = os.path.join(os.path.dirname(__file__), 'luxreport_appnames.json')
+        assert os.access('luxreport_appnames.json', os.F_OK), 'file not found'
+        with open(f) as fp:
+            appnames = json.load(fp)        
         name, ext = os.path.splitext(filename)
         apk = appnames[filename] if filename in appnames else name
         sup = {name.split(s)[0] for s in ('_', '-')}
@@ -1316,19 +1161,9 @@ Size: {0.sd_size}
 
 
 def main():
-    lux = ReleaseCollection()
-    tlx = ReleaseCollection()
-
-    threads = list()
-    threads.append(
-        threading.Thread(target=lux.refresh,
-         args=('/shares/releases/Lux', '/shares/releases/xml/luxreport.xml')))
-    threads.append(
-        threading.Thread(target=tlx.refresh,
-         args=('/shares/releases/Runbo',
-               '/shares/releases/xml/tlxreport.xml')))
-    for t in threads:
-        t.start()
+    for i in Settings.tasks:
+        task = ReleaseCollection()
+        task.refresh(i, Settings.tasks[i])
 
 
 if __name__ == '__main__':
