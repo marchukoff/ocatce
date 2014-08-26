@@ -15,8 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# - Requirement: All must be in a single file!
-# - OK
 
 import collections
 import copy
@@ -33,27 +31,7 @@ import xml.dom.minidom
 import xml.etree.ElementTree
 import xml.sax.saxutils
 
-# take it from /our/wiki/pmwiki.php/NSG/LangId
-langs = {"ar": ("arabic", 1, "ara"), "bg": ("bulgarian", 2, "bul"),
-         "bs": ("bosnian", 46, "bos"), "cs": ("czech", 5, "cze"),
-         "da": ("danish", 6, "dan"), "de": ("german", 7, "deu"),
-         "el": ("greek", 8, "gre"), "en": ("english", 9, "eng"),
-         "es": ("spanish", 10, "spa"), "et": ("estonian", 37, "est"),
-         "fa": ("farsi", 41, "far"), "fi": ("finnish", 11, "fin"),
-         "fr": ("french", 12, "fre"), "he": ("hebrew", 13, "heb"),
-         "hi": ("hindi", 57, "hin"), "hr": ("croatian", 49, "cro"),
-         "hu": ("hungarian", 14, "hun"), "hy": ("armenian", 43, "arm"),
-         "id": ("indonesian", 33, "ind"), "it": ("italian", 16, "ita"),
-         "ja": ("japanese", 17, "jap"), "ko": ("korean", 18, "kor"),
-         "lt": ("lithuanian", 39, "lit"), "lv": ("latvian", 38, "lat"),
-         "nl": ("dutch", 19, "dut"), "nn": ("norwegian", 20, "nno"),
-         "pl": ("polish", 21, "pol"), "pt": ("portuguese", 22, "por"),
-         "ro": ("romanian", 24, "rom"), "ru": ("russian", 25, "rus"),
-         "sk": ("slovak", 27, "svk"), "sq": ("albanian", 28, "alb"),
-         "sr": ("serbian", 66, "srb"), "sv": ("swedish", 29, "swe"),
-         "th": ("thai", 30, "tha"), "tl": ("tagalog", 53, "tgl"),
-         "tr": ("turkish", 31, "tur"), "uk": ("ukrainian", 34, "ukr"),
-         "vi": ("vietnamese", 42, "vie"), "zh": ("chinese", 4, "chi")}
+from functools import wraps
 
 # It's logger and I've use it instead of print.
 logger = logging.getLogger()
@@ -70,10 +48,52 @@ logger.addHandler(ch)
 
 
 class Settings(object):
-    tasks = dict()
-    f = os.path.join(os.path.dirname(__file__), 'luxreport_tasks.json')
-    with open(f) as fp:
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                     'luxreport_tasks.json'))) as fp:
         tasks = json.load(fp)
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                         'luxreport_blacklog.json'))) as fp:
+        blacklog = set(json.load(fp))        
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                         'luxreport_ectaco.json'))) as fp:
+        suite = set(json.load(fp))
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                         'luxreport_appnames.json'))) as fp:
+        appnames = json.load(fp)        
+    lang_ext_gtlang = re.compile(r'c_(\w\w)_(\w\w)\.txt')
+    lang_ext_jibbigo = re.compile(
+           r's2s(?:-mob)?-(\w\w).{4}(\w\w).{7,9}\.s2s')
+    lang_tv_snddict = re.compile('db_(\d\d?)_.+\.snd')
+    lang_tv_sndphrb = re.compile('phr_(\d\d)\.snd')
+    lang_ulearn = re.compile('DATA(\d\d)_(\d\d)')
+    tts_svox = re.compile('svox-.{6}(\w\w).{5}\.pil')
+# take it from /our/wiki/pmwiki.php/NSG/LangId
+    languages = collections.defaultdict(lambda: ("unknown", 0, "xxx"))
+    languages.update({
+             "ar": ("arabic", 1, "ara"),"bg": ("bulgarian", 2, "bul"),
+             "bs": ("bosnian", 46, "bos"), "cs": ("czech", 5, "cze"),
+             "da": ("danish", 6, "dan"), "de": ("german", 7, "deu"),
+             "el": ("greek", 8, "gre"), "en": ("english", 9, "eng"),
+             "es": ("spanish", 10, "spa"), "et": ("estonian", 37, "est"),
+             "fa": ("farsi", 41, "far"), "fi": ("finnish", 11, "fin"),
+             "fr": ("french", 12, "fre"), "he": ("hebrew", 13, "heb"),
+             "hi": ("hindi", 57, "hin"), "hr": ("croatian", 49, "cro"),
+             "hu": ("hungarian", 14, "hun"), "hy": ("armenian", 43, "arm"),
+             "id": ("indonesian", 33, "ind"), "it": ("italian", 16, "ita"),
+             "ja": ("japanese", 17, "jap"), "ko": ("korean", 18, "kor"),
+             "lt": ("lithuanian", 39, "lit"), "lv": ("latvian", 38, "lat"),
+             "nl": ("dutch", 19, "dut"), "nn": ("norwegian", 20, "nno"),
+             "pl": ("polish", 21, "pol"), "pt": ("portuguese", 22, "por"),
+             "ro": ("romanian", 24, "rom"), "ru": ("russian", 25, "rus"),
+             "sk": ("slovak", 27, "svk"), "sq": ("albanian", 28, "alb"),
+             "sr": ("serbian", 66, "srb"), "sv": ("swedish", 29, "swe"),
+             "th": ("thai", 30, "tha"), "tl": ("tagalog", 53, "tgl"),
+             "tr": ("turkish", 31, "tur"), "uk": ("ukrainian", 34, "ukr"),
+             "vi": ("vietnamese", 42, "vie"), "zh": ("chinese", 4, "chi")})
+    languages.update(
+        {"iw": languages["he"], "jp": languages["ja"],
+         "ua": languages["uk"], "us": languages["en"]})
+    languages_by_num = {v[1]: v[0] for v in languages.values()}
 
 
 class AbstractDir(object):
@@ -104,8 +124,11 @@ class AbstractDir(object):
 
 
     def remove(self):
-        if self:
+        try:
             shutil.rmtree(self._name)
+        except OSError as err:
+            logger.error('An error occured to delete %s' % self._name)
+            logger.error(err)
 
 
 class TempDir(AbstractDir):
@@ -143,6 +166,14 @@ class ExtDir(AbstractDir):
                             for s in ('onestop', 'faststop', 'forcestop')])
         os.system(command)
         super().remove()
+
+
+def stripper(method):
+    @wraps(method)
+    def wrapper(self, s):
+        r = str(s).strip() if s else "-"
+        return method(self, r)
+    return wrapper
 
 
 class Release(object):
@@ -192,8 +223,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @project_model.setter
+    @stripper
     def project_model(self, s):
-        self.__project_model = str(s).strip() if s else "-"
+        self.__project_model = s
 
 
     @property
@@ -204,8 +236,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @apps_ectaco.setter
-    def apps_ectaco(self, apps_ectaco):
-        self.__apps_ectaco = str(apps_ectaco).strip() if apps_ectaco else "-"
+    @stripper
+    def apps_ectaco(self, s):
+        self.__apps_ectaco = s
 
 
     @property
@@ -215,8 +248,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @apps_other.setter
-    def apps_other(self, apps_other):
-        self.__apps_other = str(apps_other).strip() if apps_other else "-"
+    @stripper
+    def apps_other(self, s):
+        self.__apps_other = s
 
 
     @property
@@ -226,8 +260,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @voice_dictionary.setter
+    @stripper
     def voice_dictionary(self, s):
-        self.__voice_dictionary = str(s).strip() if s else "-"
+        self.__voice_dictionary = s
 
 
     @property
@@ -237,8 +272,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @voice_phrasebook.setter
+    @stripper
     def voice_phrasebook(self, s):
-        self.__voice_phrasebook = str(s).strip() if s else "-"
+        self.__voice_phrasebook = s
 
 
     @property
@@ -248,8 +284,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @photo_text.setter
+    @stripper
     def photo_text(self, s):
-        self.__photo_text = str(s).strip() if s else '-'
+        self.__photo_text = s
 
 
     @property
@@ -259,8 +296,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @ulearn.setter
+    @stripper
     def ulearn(self, s):
-        self.__ulearn = s.strip() if s else '-'
+        self.__ulearn = s
 
 
     @property
@@ -270,8 +308,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @ulearn2.setter
+    @stripper
     def ulearn2(self, s):
-        self.__ulearn2 = s.strip() if s else '-'
+        self.__ulearn2 = s
 
 
     @property
@@ -281,8 +320,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @feature_tts.setter
-    def feature_tts(self, feature_tts):
-        self.__feature_tts = str(feature_tts).strip() if feature_tts else "-"
+    @stripper
+    def feature_tts(self, s):
+        self.__feature_tts = s
 
 
     @property
@@ -292,8 +332,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @feature_sr.setter
-    def feature_sr(self, feature_sr):
-        self.__feature_sr = str(feature_sr).strip() if feature_sr else "-"
+    @stripper
+    def feature_sr(self, s):
+        self.__feature_sr = s
 
 
     @property
@@ -303,8 +344,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @feature_gt.setter
-    def feature_gt(self, feature_gt):
-        self.__feature_gt = str(feature_gt).strip() if feature_gt else "-"
+    @stripper
+    def feature_gt(self, s):
+        self.__feature_gt = s
 
 
     @property
@@ -314,8 +356,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @feature_jibbigo.setter
+    @stripper
     def feature_jibbigo(self, s):
-        self.__feature_jibbigo = str(s).strip() if s else "-"
+        self.__feature_jibbigo = s
 
 
     @property
@@ -325,8 +368,9 @@ class Release(object):
 
     # noinspection PyAttributeOutsideInit
     @sd_size.setter
-    def sd_size(self, sd_size):
-        self.__sd_size = str(sd_size).strip() if sd_size else "-"
+    @stripper
+    def sd_size(self, s):
+        self.__sd_size = s
 
 
     def __repr__(self):
@@ -357,21 +401,6 @@ class Release(object):
 
 # noinspection PyCompatibility
 class Analizer(object):
-    _lang_ext_gtlang = re.compile(r'c_(\w\w)_(\w\w)\.txt')
-    _lang_ext_jibbigo = re.compile(
-           r's2s(?:-mob)?-(\w\w).{4}(\w\w).{7,9}\.s2s')
-    _lang_tv_snddict = re.compile('db_(\d\d?)_.+\.snd')
-    _lang_tv_sndphrb = re.compile('phr_(\d\d)\.snd')
-    _lang_ulearn = re.compile('DATA(\d\d)_(\d\d)')
-    _tts_svox = re.compile('svox-.{6}(\w\w).{5}\.pil')
-    _languages = collections.defaultdict(lambda: ("unknown", 0, "xxx"))
-    _languages.update(langs)
-    _languages.update(
-        {"iw": _languages["he"], "jp": _languages["ja"],
-         "ua": _languages["uk"], "us": _languages["en"]})
-    _languages_by_num = {v[1]: v[0] for v in _languages.values()}
-
-
     def __init__(self, filename):
         facet = {'_set_apps_ectaco': 'apps_ectaco',
                  '_set_apps_other': 'apps_other',
@@ -443,7 +472,10 @@ class Analizer(object):
                         data['sd_size'] = '%.2f GB' % Analizer._size_GB(sdcard)
 
                 if ext == ".apk":
-                    a, b = Analizer._get_application(f)
+                    if f in Settings.blacklog:
+                        continue
+                    else:
+                        a, b = Analizer._get_application(f)
                     if a:
                         self._set_apps_ectaco.add(a)
                     if b:
@@ -499,16 +531,16 @@ class Analizer(object):
     def _get_lang_ulearn(folder):
         result = set()
         for d in os.listdir(folder):
-            match = Analizer._lang_ulearn.match(d)
+            match = Settings.lang_ulearn.match(d)
             if match is None:
                 continue
             x = int(match.group(1))
             y = int(match.group(2))
             a, b = 'unknown', 'unknown'
-            if x in Analizer._languages_by_num:
-                a = Analizer._languages_by_num[x]
-            if y in Analizer._languages_by_num:
-                b = Analizer._languages_by_num[y]
+            if x in Settings.languages_by_num:
+                a = Settings.languages_by_num[x]
+            if y in Settings.languages_by_num:
+                b = Settings.languages_by_num[y]
             result.add('-'.join((a, b)))
         return result
 
@@ -516,65 +548,49 @@ class Analizer(object):
     @staticmethod
     def _get_lang_tv(filename, app='dictionary'):
         result = set()
-        reg = Analizer._lang_tv_snddict
+        reg = Settings.lang_tv_snddict
         if app not in ('dictionary', 'phrasebook'):
             return result
         if app == 'phrasebook':
-            reg = Analizer._lang_tv_sndphrb
+            reg = Settings.lang_tv_sndphrb
         for m in reg.finditer(filename):
             for n in m.groups():
                 x = int(n)
-                if x in Analizer._languages_by_num:
-                    result.add(Analizer._languages_by_num[x])
+                if x in Settings.languages_by_num:
+                    result.add(Settings.languages_by_num[x])
         return result
 
 
     @staticmethod
     def _get_lang_ext(filename, ext='.txt'):
         result = set()
-        reg = Analizer._lang_ext_gtlang
+        reg = Settings.lang_ext_gtlang
         if ext not in ('.txt', '.s2s'):
             return result
         elif ext == '.s2s':
-            reg = Analizer._lang_ext_jibbigo
+            reg = Settings.lang_ext_jibbigo
         for m in reg.finditer(filename):
-            result |= {Analizer._languages[n][0] for n in m.groups()}
+            result |= {Settings.languages[n][0] for n in m.groups()}
         return result
 
 
     @staticmethod
     def _get_tts(filename):
         tts = set()
-        for m in Analizer._tts_svox.finditer(filename):
+        for m in Settings.tts_svox.finditer(filename):
             for n in m.groups():
-                tts.add(Analizer._languages[n][0])
+                tts.add(Settings.languages[n][0])
         return tts
 
 
     @staticmethod
     def _get_application(filename):
-        blacklog = set()
-        suite = set()
-        appnames = dict()
-        f = os.path.join(os.path.dirname(__file__), 'luxreport_blacklog.json')
-        assert os.access(f, os.F_OK), 'file not found'
-        with open(f) as fp:
-            blacklog = set(json.load(fp))
-        if filename in blacklog:
-            return ('', '')
-        f = os.path.join(os.path.dirname(__file__), 'luxreport_ectaco.json')        
-        assert os.access('luxreport_ectaco.json', os.F_OK), 'file not found'
-        with open(f) as fp:
-            suite = set(json.load(fp))
-        f = os.path.join(os.path.dirname(__file__), 'luxreport_appnames.json')
-        assert os.access('luxreport_appnames.json', os.F_OK), 'file not found'
-        with open(f) as fp:
-            appnames = json.load(fp)        
         name, ext = os.path.splitext(filename)
+        appnames = Settings.appnames
         apk = appnames[filename] if filename in appnames else name
         sup = {name.split(s)[0] for s in ('_', '-')}
         sup.add(filename)
-        if sup & suite:
+        if sup & Settings.suite:
             return (apk, '')
         else:
             return ('', apk)
@@ -629,8 +645,8 @@ class Analizer(object):
         result = set()
         for n in os.listdir(path):
             m = n.split('-')[0]
-            if m in Analizer._languages.keys():
-                result.add(Analizer._languages[m][0])
+            if m in Settings.languages.keys():
+                result.add(Settings.languages[m][0])
         return result
 
 
@@ -640,7 +656,7 @@ class Analizer(object):
         if len(name) < 3:
             return result
         a = name[:3].lower()
-        for v in Analizer._languages.values():
+        for v in Settings.languages.values():
             if a == v[2]:
                 result = v[0],
                 break
@@ -1028,7 +1044,7 @@ Size: {0.sd_size}
 
 
     def export_html(self, filename):
-        def nonBreakFix(s):
+        def nbsp(s):
             items = s.split(', ')
             result = ', '.join(
              [i.replace(' ', '&nbsp;').replace('-', '&#8209;') for i in items])
@@ -1060,16 +1076,17 @@ Size: {0.sd_size}
 <td class="header">Jibbigo</td>
 <td class="header2">SD: card Size</td>
 </tr>"""
+        
+        f = xml.sax.saxutils.escape
         with open(filename, mode='w') as fp:
             fp.write(page_header)
             for i, release in enumerate(self.values()):
                 t = list()
-                s = xml.sax.saxutils.escape(release.project_id)
+                s = f(release.project_id)
                 t.append('<tr>\n<td align="right">%i</td>' % (i + 1))
                 if ReleaseCollection._TESTING.search(
                   release.project_id) is not None:
-                    t.append('<td>%s</td>' %
-                        xml.sax.saxutils.escape(release.project_id))
+                    t.append('<td>%s</td>' % f(release.project_id))
                 elif release.project_id.startswith('lux2'):
                     t.append('<td><a href="{0}">{1}</a></td>'.format(
                              '/'.join((ReleaseCollection._LUX, s)), s))
@@ -1077,39 +1094,21 @@ Size: {0.sd_size}
                     t.append('<td><a href="{0}">{1}</a></td>'.format(
                              '/'.join((ReleaseCollection._SG, s)), s))
                 else:
-                    t.append('<td>%s</td>' %
-                                xml.sax.saxutils.escape(release.project_id))
-                t.append('<td>%s</td>' %
-                            xml.sax.saxutils.escape(release.project_model))
-                t.append('<td>%s</td>' %
-                        nonBreakFix(
-                            xml.sax.saxutils.escape(release.apps_ectaco)))
-                t.append('<td>%s</td>' %
-                        nonBreakFix(
-                            xml.sax.saxutils.escape(release.apps_other)))
-                t.append('<td>%s</td>' %
-                        nonBreakFix(
-                            xml.sax.saxutils.escape(release.voice_dictionary)))
-                t.append('<td>%s</td>' %
-                        nonBreakFix(
-                            xml.sax.saxutils.escape(release.voice_phrasebook)))
-                t.append('<td>%s</td>' %
-                            xml.sax.saxutils.escape(release.photo_text))
-                t.append('<td>%s</td>' %
-                        nonBreakFix(xml.sax.saxutils.escape(release.ulearn)))
-                t.append('<td>%s</td>' %
-                        nonBreakFix(xml.sax.saxutils.escape(release.ulearn2)))
-                t.append('<td>%s</td>' %
-                            xml.sax.saxutils.escape(release.feature_tts))
-                t.append('<td>%s</td>' %
-                                xml.sax.saxutils.escape(release.feature_sr))
-                t.append('<td>%s</td>' %
-                    nonBreakFix(xml.sax.saxutils.escape(release.feature_gt)))
-                t.append('<td>%s</td>' %
-                    nonBreakFix(
-                        xml.sax.saxutils.escape(release.feature_jibbigo)))
+                    t.append('<td>%s</td>' % f(release.project_id))
+                t.append('<td>%s</td>' % f(release.project_model))
+                t.append('<td>%s</td>' % nbsp(f(release.apps_ectaco)))
+                t.append('<td>%s</td>' % nbsp(f(release.apps_other)))
+                t.append('<td>%s</td>' % nbsp(f(release.voice_dictionary)))
+                t.append('<td>%s</td>' % nbsp(f(release.voice_phrasebook)))
+                t.append('<td>%s</td>' % f(release.photo_text))
+                t.append('<td>%s</td>' % nbsp(f(release.ulearn)))
+                t.append('<td>%s</td>' % nbsp(f(release.ulearn2)))
+                t.append('<td>%s</td>' % f(release.feature_tts))
+                t.append('<td>%s</td>' % f(release.feature_sr))
+                t.append('<td>%s</td>' % nbsp(f(release.feature_gt)))
+                t.append('<td>%s</td>' % nbsp(f(release.feature_jibbigo)))
                 t.append('<td align="center" class="dimmed">%s</td>' % 
-                        nonBreakFix(xml.sax.saxutils.escape(release.sd_size)))
+                        nbsp(f(release.sd_size)))
                 t.append('\n</tr>')
                 fp.write(table_header + '\n'.join(t))
             fp.write('</table>\n</body>\n</html>')
