@@ -2,88 +2,78 @@
 
 import logging
 import os
+
 from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice
 
-
-logger = logging.getLogger()
-logger.setLevel(logging.DEBUG)
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-fh = logging.FileHandler('_'.join((os.path.splitext(__file__)[1], "log.txt")))
-fh.setLevel(logging.WARNING)
-fh.setFormatter(formatter)
-logger.addHandler(fh)
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-ch.setFormatter(formatter)
-logger.addHandler(ch)
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 class TestLux:
     def __init__(self):
         self.device = MonkeyRunner.waitForConnection()
+        #self.device.touch(70, 70, MonkeyDevice.DOWN_AND_UP) #All apps APPS
+        #self.device.touch(170, 70, MonkeyDevice.DOWN_AND_UP) #All apps WIDGETS
         self.device.wake()
         self.device.shell('logcat -c')  # Clear logs buffer
-        self.x = int(self.device.getProperty("display.width"))
-        self.y = int(self.device.getProperty("display.height"))
 
 
     def allApps(self):
-        d =50
+        self.device.press("KEYCODE_BACK", MonkeyDevice.DOWN_AND_UP)
+        self.device.press("KEYCODE_BACK", MonkeyDevice.DOWN_AND_UP)
+        MonkeyRunner.sleep(0.5)
         self.device.press("KEYCODE_HOME", MonkeyDevice.DOWN_AND_UP)
         MonkeyRunner.sleep(1.0)
-        self.device.touch(self.x-d, self.y//2, "DOWN_AND_UP")
+        self.device.touch(750, 240, MonkeyDevice.DOWN_AND_UP)
+        MonkeyRunner.sleep(0.5)
+        self.device.touch(170, 70, MonkeyDevice.DOWN_AND_UP) #All apps WIDGETS
+        self.device.touch(70, 70, MonkeyDevice.DOWN_AND_UP) #All apps APPS
+        self.device.touch(70, 70, MonkeyDevice.UP)
         MonkeyRunner.sleep(1.0)
 
 
     def swipeLeft(self, times=1):
-        d = 100
         for i in range(times):
-            self.device.drag((self.x-d, self.y//2), (d ,self.y//2), 1.0)
-        MonkeyRunner.sleep(1.0)
+            self.device.drag((500, 240), (200, 240), 0.1)
+        MonkeyRunner.sleep(0.5)
 
 
     def swipeRight(self, times=1):
-        d = 100
         for i in range(times):
-            self.device.drag((d, self.y//2), (self.x-d ,self.y//2), 1.0)
-        MonkeyRunner.sleep(1.0)
+            self.device.drag((200,  240), (500 , 240), 0.1)
+        MonkeyRunner.sleep(0.5)
 
 
     def smokeTestAllApps(self):
-        nx = 70
-        mx = 130
-        ny = 200
-        my = 100
         self.allApps()
-        self.swipeRight(5)
-        for zz in range(5):
-            for yy in range(3):
-                for xx in range(6):
-                    logger.info("Smoke Test %s_%s_%s" % (zz, xx, yy))
-                    self.device.shell("logcat -c")
-                    self.device.touch(nx+xx*mx, ny+yy*my, "DOWN_AND_UP")
-                    MonkeyRunner.sleep(6.0)
+        for i in range(3):# 5 screens
+            for j in range(1): #3 series
+                for k in range(2): #6 itemes
+                    logging.info("Smoke Test %s_%s_%s" % (i, k, j))
+                    # self.device.shell("logcat -c")
+                    x = 70+130*k
+                    y = 200+100*j
+                    logging.info("x=%s, y=%s, z=%s" % (k, j, i))
+                    if(i and k==0): self.swipeLeft()
+                    MonkeyRunner.sleep(2.5)
+                    self.device.touch(x, y, MonkeyDevice.DOWN_AND_UP)
+                    MonkeyRunner.sleep(5.0)
 
-                    msg = self.device.shell("logcat -d")
-                    msg = "None" if msg is None else msg.encode("utf-8")
-                    f = open("log_%s_%s_%s.txt" % (zz, xx, yy), 'w')
-                    f.write(msg)
-                    f.close()
+                    # s = self.device.shell("logcat -d")
+                    # s = "None" if s is None else s.encode("utf-8")
+                    # f = open("log_%s_%s_%s.txt" % (i, k, j), 'w')
+                    # f.write(s)
+                    # f.close()
 
                     image = self.device.takeSnapshot()
-                    image.writeToFile("img_%s_%s_%s.png" % (zz, xx, yy), "png")
-                    MonkeyRunner.sleep(1.0)
+                    image.writeToFile("img_%s%s%s.png" % (i, k, j), "png")
                     self.allApps()
-            self.swipeLeft()
-        MonkeyRunner.sleep(1.0)
+                    self.swipeLeft(i)
+        return True
 
 
 def main():
     a = TestLux()
     a.smokeTestAllApps()
-    a.swipeLeft() # TODO: Работает?
-    #a.device.touch(50, 140, 'DOWN_AND_UP')
-    #a.device.press("KEYCODE_MENU", MonkeyDevice.DOWN_AND_UP)
 
 
 if __name__ == '__main__':
