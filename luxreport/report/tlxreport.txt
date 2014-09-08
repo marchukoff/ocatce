@@ -1,0 +1,1747 @@
+SG_20131010_ML6_SD.exe
+======================
+Model: SG Spa 10-10-2013 14:21
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, English Dictionary in
+    Spanish, Language Teacher, Language Teacher PixWord, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-FRE, MT-ENG-GER,
+    MT-ENG-ITA, MT-ENG-POR, MT-ENG-SPA, Photo Translator, PhotoText,
+    PhraseBook, Picture Dictionary, SpeedReading Course, U-Learn,
+    Universal Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, Android Sensor Box, Apex Launcher, APKInstaller,
+    AssistPhone, Calculator, CalendarGoogle, Camera, CellConnService,
+    DeskClock, Downloads, eBay, Email, Facebook, FaceLock,
+    FileManager, flashlight, FMRadio, Gallery2, Google Chrome, Google
+    Translate, GooglePlay, Inkpad NotePad, Intercom, Internet, Jibbigo
+    Translator, LibriVox Audio Books, LocationEM, Mms,
+    MTKThermalManager, MultiLing Keyboard, Music, NetworkLocation,
+    Omacp, Phone, Settings, Skype, SmsReg, SOS, SoundRecorder, The
+    Weather Channel, TripAdvisor, VideoPlayer, Voice Translator,
+    VoiceSearch, Wikipedia, World Emergency Numbers, World Factbook,
+    World Travel Guide by Triposo, YGPS, YouTube
+
+- Dictionary Voice: english, french, german, italian, portuguese, spanish
+- PhraseBook Voice: english, french, german, italian, portuguese, spanish
+- PhotoText Langs: danish, english, german
+- ULearn Pairs: english-french, english-german, english-italian, english-portuguese, english-spanish, french-english, german-english, italian-english, portuguese-english, spanish-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, french, german, italian, portuguese, spanish
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: english, spanish
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131016_Japanese_SD.exe
+===========================
+Model: SG Jap 16-10-2013 10:35
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, Android Sensor Box, Apex Launcher, APKInstaller,
+    AssistPhone, Calculator, CalendarGoogle, Camera, CellConnService,
+    DeskClock, Downloads, eBay, Email, Facebook, FaceLock,
+    FileManager, flashlight, FMRadio, Gallery2, Gmail, GMS_Maps,
+    Google Chrome, Google Translate, GooglePlay, Inkpad NotePad,
+    Intercom, Internet, LibriVox Audio Books, LocationEM, Mms,
+    MTKThermalManager, MultiLing Keyboard, Music, NetworkLocation,
+    Omacp, Phone, Settings, Skype, SmsReg, SOS, SoundRecorder, The
+    Weather Channel, TripAdvisor, VideoPlayer, Voice Translator,
+    VoiceSearch, Wikipedia, World Emergency Numbers, World Factbook,
+    World Travel Guide by Triposo, YGPS, YouTube
+
+- Dictionary Voice: english, japanese
+- PhraseBook Voice: english, japanese
+- PhotoText Langs: english
+- ULearn Pairs: english-japanese, japanese-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131017_Uni_SD.exe
+======================
+Model: Uni 17-10-2013 12:48
+
+Ectaco Applications
+-------------------
+    English Dictionary in English, Photo Translator, PhotoText,
+    Picture Dictionary, SpeedReading Course, Universal Translator
+
+3rd party Applications
+----------------------
+    Android Keyboard, Android Sensor Box, Apex Launcher, APKInstaller,
+    AssistPhone, Calculator, CalendarGoogle, Camera, CellConnService,
+    DeskClock, Downloads, eBay, Email, Facebook, FaceLock,
+    FileManager, flashlight, FMRadio, Gallery2, Gmail, GMS_Maps,
+    Google Chrome, Google Translate, GooglePlay, Inkpad NotePad,
+    Intercom, Internet, LibriVox Audio Books, LocationEM, Mms,
+    MTKThermalManager, MultiLing Keyboard, Music, NetworkLocation,
+    Omacp, Phone, Settings, Skype, SmsReg, SOS, SoundRecorder, The
+    Weather Channel, TripAdvisor, VideoPlayer, Voice Translator,
+    VoiceSearch, Wikipedia, World Emergency Numbers, World Factbook,
+    World Travel Guide by Triposo, YGPS, YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: -
+- PhotoText Langs: english
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131018_Thai_SD.exe
+=======================
+Model: SG Tha 18-10-2013 10:00
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, Android Sensor Box, Apex Launcher, APKInstaller,
+    AssistPhone, Calculator, CalendarGoogle, Camera, CellConnService,
+    DeskClock, Downloads, eBay, Email, Facebook, FaceLock,
+    FileManager, flashlight, FMRadio, Gallery2, Gmail, GMS_Maps,
+    Google Chrome, Google Translate, GooglePlay, Inkpad NotePad,
+    Intercom, Internet, LibriVox Audio Books, LocationEM, Mms,
+    MTKThermalManager, MultiLing Keyboard, Music, NetworkLocation,
+    Omacp, Phone, Settings, Skype, SmsReg, SOS, SoundRecorder, The
+    Weather Channel, TripAdvisor, VideoPlayer, Voice Translator,
+    VoiceSearch, Wikipedia, World Emergency Numbers, World Factbook,
+    World Travel Guide by Triposo, YGPS, YouTube
+
+- Dictionary Voice: english, thai
+- PhraseBook Voice: english, thai
+- PhotoText Langs: english, thai
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131028_Vietnamese.exe
+==========================
+Model: SG Vie 28-10-2013 08:05
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, Android Sensor Box, Apex Launcher, APKInstaller,
+    AssistPhone, Calculator, CalendarGoogle, Camera, CellConnService,
+    DeskClock, Downloads, eBay, Email, Facebook, FaceLock,
+    FileManager, flashlight, FMRadio, Gallery2, Gmail, GMS_Maps,
+    Google Chrome, Google Translate, GooglePlay, Inkpad NotePad,
+    Intercom, Internet, LibriVox Audio Books, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    Skype, SmsReg, SOS, SoundRecorder, The Weather Channel,
+    TripAdvisor, VideoPlayer, Voice Translator, VoiceSearch,
+    Wikipedia, World Emergency Numbers, World Factbook, World Travel
+    Guide by Triposo, YGPS, YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, vietnamese
+- PhotoText Langs: english, vietnamese
+- ULearn Pairs: english-vietnamese, vietnamese-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131129_Italian.exe
+=======================
+Model: SG Ita 29-11-2013 12:48
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-ITA, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, italian
+- PhraseBook Voice: english, italian
+- PhotoText Langs: english, italian
+- ULearn Pairs: english-italian, italian-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, italian
+- Google voice typing: english, italian
+- Google Translate: english, italian
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131129_Polish.exe
+======================
+Model: SG Pol 29-11-2013 12:54
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-POL, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, polish
+- PhotoText Langs: english, polish
+- ULearn Pairs: english-polish, polish-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, polish
+- Google voice typing: english
+- Google Translate: english, polish
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131129_Portuguese.exe
+==========================
+Model: SG Por 29-11-2013 12:56
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-POR, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, portuguese
+- PhraseBook Voice: english, portuguese
+- PhotoText Langs: english, portuguese
+- ULearn Pairs: english-portuguese, portuguese-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, portuguese
+- Google voice typing: english, portuguese
+- Google Translate: english, portuguese
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131129_Russian.exe
+=======================
+Model: SG Rus 29-11-2013 11:58
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-RUS, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, russian
+- PhraseBook Voice: english, russian
+- PhotoText Langs: english, russian
+- ULearn Pairs: english-russian, russian-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, russian
+- Google voice typing: english, russian
+- Google Translate: english, russian
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131129_Spanish.exe
+=======================
+Model: SG Spa 29-11-2013 12:38
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, English Dictionary in
+    Spanish, Language Teacher, Language Teacher PixWord, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-SPA, Photo
+    Translator, PhotoText, PhraseBook, Picture Dictionary,
+    SpeedReading Course, U-Learn, Universal Translator, Vocabulary
+    Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, spanish
+- PhraseBook Voice: english, spanish
+- PhotoText Langs: english, spanish
+- ULearn Pairs: english-spanish, spanish-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, spanish
+- Google voice typing: english, spanish
+- Google Translate: english, spanish
+- Jibbigo: english, spanish
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131202_Russian_UI_Russian.exe
+==================================
+Model: SG Rus 02-12-2013 15:27
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-RUS, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, russian
+- PhraseBook Voice: english, russian
+- PhotoText Langs: english, russian
+- ULearn Pairs: english-russian, russian-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, russian
+- Google voice typing: english, russian
+- Google Translate: english, russian
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131203_Polish_UI_Polish.exe
+================================
+Model: SG Pol 03-12-2013 16:07
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-POL, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, polish
+- PhotoText Langs: english, polish
+- ULearn Pairs: english-polish, polish-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, polish
+- Google voice typing: english
+- Google Translate: english, polish
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131203_Spanish_UI_Spanish.exe
+==================================
+Model: SG Spa 03-12-2013 10:15
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, English Dictionary in
+    Spanish, Language Teacher, Language Teacher PixWord, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-SPA, Photo
+    Translator, PhotoText, PhraseBook, Picture Dictionary,
+    SpeedReading Course, U-Learn, Universal Translator, Vocabulary
+    Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, spanish
+- PhraseBook Voice: english, spanish
+- PhotoText Langs: english, spanish
+- ULearn Pairs: english-spanish, spanish-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, spanish
+- Google voice typing: english, spanish
+- Google Translate: english, spanish
+- Jibbigo: english, spanish
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131205_ML8.exe
+===================
+Model: SG ML 05-12-2013 15:56
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, English Dictionary in
+    Spanish, Language Teacher, Language Teacher PixWord, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-FRE, MT-ENG-GER,
+    MT-ENG-ITA, MT-ENG-POL, MT-ENG-POR, MT-ENG-RUS, MT-ENG-SPA,
+    MTLauncher, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english SD, french SD, german SD, italian SD, portuguese SD, russian SD, spanish SD
+- PhraseBook Voice: english SD, french SD, german SD, italian SD, polish SD, portuguese SD, russian SD, spanish SD
+- PhotoText Langs: english, german, italian, polish, portuguese, russian, spanish
+- ULearn Pairs: english-french, english-german, english-italian, english-polish, english-portuguese, english-russian, english-spanish, french-english, german-english, italian-english, polish-english, portuguese-english, russian-english, spanish-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, french, german, italian, polish, portuguese, russian, spanish
+- Google voice typing: english, french, german, italian, portuguese, russian, spanish
+- Google Translate: english SD, french SD, german SD, italian SD, polish SD, portuguese SD, russian SD, spanish SD
+- Jibbigo: english, french, german, spanish
+
+SD card
+-------
+Size: 5.13 GB
+
+*****
+
+SG_20131212_Chinese.exe
+=======================
+Model: SG Chi 12-12-2013 08:48
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: chinese, english
+- PhraseBook Voice: chinese, english
+- PhotoText Langs: chinese, english
+- ULearn Pairs: chinese-english, english-chinese
+- ULearn-2 Pairs: -
+- TTS SVOX: chinese, english
+- Google voice typing: english
+- Google Translate: chinese, english
+- Jibbigo: chinese, english
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131212_French.exe
+======================
+Model: SG Fre 12-12-2013 09:43
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-FRE, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, french
+- PhraseBook Voice: english, french
+- PhotoText Langs: english
+- ULearn Pairs: english-french, french-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, french
+- Google voice typing: english, french
+- Google Translate: english, french
+- Jibbigo: english, french
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131212_German.exe
+======================
+Model: SG Ger 12-12-2013 10:19
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-GER, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SpeedReading Course, U-Learn, Universal
+    Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, german
+- PhraseBook Voice: english, german
+- PhotoText Langs: english, german
+- ULearn Pairs: english-german, german-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, german
+- Google voice typing: english, german
+- Google Translate: english, german
+- Jibbigo: english, german
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131212_Korean.exe
+======================
+Model: SG Kor 12-12-2013 10:58
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, korean
+- PhraseBook Voice: english, korean
+- PhotoText Langs: english, korean
+- ULearn Pairs: english-korean, korean-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, korean
+- Google voice typing: english, korean
+- Google Translate: english, korean
+- Jibbigo: english, korean
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20131225_ML14_for_Asian.7z
+=============================
+Model: SG ML
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, English Dictionary in
+    Spanish, Language Teacher, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-FRE, MT-ENG-GER, MT-ENG-ITA, MT-ENG-POR, MT-ENG-
+    SPA, MTLauncher, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SpeedReading Course, U-Learn, Universal Translator,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: chinese SD, english SD, french SD, german SD, italian SD, japanese SD, korean SD, portuguese SD, spanish SD, thai SD
+- PhraseBook Voice: chinese SD, english SD, french SD, german SD, hindi SD, indonesian SD, italian SD, japanese SD, korean SD, portuguese SD, spanish SD, tagalog SD, thai SD, vietnamese SD
+- PhotoText Langs: chinese, english, german, hindi, indonesian, italian, korean, portuguese, spanish, tagalog, thai, vietnamese
+- ULearn Pairs: chinese-english, english-chinese, english-french, english-german, english-italian, english-japanese, english-korean, english-portuguese, english-spanish, english-vietnamese, french-english, german-english, italian-english, japanese-english, korean-english, portuguese-english, spanish-english, vietnamese-english
+- ULearn-2 Pairs: -
+- TTS SVOX: chinese, english, french, german, italian, japanese, korean, portuguese, spanish
+- Google voice typing: english, french, german, italian, japanese, korean, portuguese, spanish
+- Google Translate: chinese SD, english SD, french SD, german SD, hindi SD, indonesian SD, italian SD, japanese SD, korean SD, portuguese SD, spanish SD, thai SD, vietnamese SD
+- Jibbigo: chinese SD, english SD, french SD, german SD, japanese SD, korean SD, spanish SD, tagalog SD, thai SD
+
+SD card
+-------
+Size: 8.60 GB
+
+*****
+
+SG_20131230_Farsi.exe
+=====================
+Model: SG Far
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Learning Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SpeedReading Course,
+    U-Learn, Universal Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english, farsi
+- PhraseBook Voice: english, farsi
+- PhotoText Langs: english
+- ULearn Pairs: english-farsi, farsi-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: english
+- Google Translate: english, farsi
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20140114_Hebrew.exe
+======================
+Model: SG Heb
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Learning Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SpeedReading Course,
+    Universal Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, hebrew
+- PhotoText Langs: english, hebrew
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: english
+- Google Translate: english, hebrew
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20140117_Arabic.exe
+======================
+Model: SG Ara
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, Language Teacher,
+    Learning Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SpeedReading Course,
+    U-Learn, Universal Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: arabic, english
+- PhraseBook Voice: arabic, english
+- PhotoText Langs: english
+- ULearn Pairs: arabic-english, english-arabic
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: english
+- Google Translate: arabic, english
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+SG_20140123_ML19.7z
+===================
+Model: SG ML
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, English Dictionary in
+    Spanish, Language Teacher, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-FRE, MT-ENG-GER, MT-ENG-ITA, MT-ENG-POL, MT-ENG-
+    POR, MT-ENG-RUS, MT-ENG-SPA, MTLauncher, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SpeedReading Course,
+    U-Learn, Universal Translator, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Android Keyboard, APKInstaller, AssistPhone, Calculator,
+    CalendarGoogle, Camera, CellConnService, DeskClock, Downloads,
+    Email, FaceLock, FileManager, flashlight, FMRadio, Gallery2,
+    GooglePlay, Intercom, Internet, LocationEM, Mms,
+    MTKThermalManager, Music, NetworkLocation, Omacp, Phone, Settings,
+    SmsReg, SOS, SoundRecorder, VideoPlayer, Voice Translator, YGPS
+
+- Dictionary Voice: arabic SD, chinese SD, english SD, farsi SD, french SD, german SD, italian SD, japanese SD, korean SD, portuguese SD, russian SD, spanish SD, thai SD
+- PhraseBook Voice: arabic SD, chinese SD, english SD, farsi SD, french SD, german SD, hebrew SD, indonesian SD, italian SD, japanese SD, korean SD, polish SD, portuguese SD, russian SD, spanish SD, tagalog SD, thai SD, turkish SD, vietnamese SD
+- PhotoText Langs: chinese, english, german, hebrew, indonesian, italian, korean, polish, portuguese, russian, spanish, tagalog, thai, turkish, vietnamese
+- ULearn Pairs: arabic-english, chinese-english, english-arabic, english-chinese, english-farsi, english-french, english-german, english-italian, english-japanese, english-korean, english-polish, english-portuguese, english-russian, english-spanish, english-vietnamese, farsi-english, french-english, german-english, italian-english, japanese-english, korean-english, polish-english, portuguese-english, russian-english, spanish-english, vietnamese-english
+- ULearn-2 Pairs: -
+- TTS SVOX: chinese, english, french, german, italian, japanese, korean, polish, portuguese, russian, spanish
+- Google voice typing: english, french, german, italian, japanese, korean, portuguese, russian, spanish
+- Google Translate: arabic SD, chinese SD, english SD, farsi SD, french SD, german SD, hebrew SD, indonesian SD, italian SD, japanese SD, korean SD, polish SD, portuguese SD, russian SD, spanish SD, thai SD, turkish SD, vietnamese SD
+- Jibbigo: chinese SD, english SD, french SD, german SD, japanese SD, korean SD, spanish SD, tagalog SD, thai SD
+
+SD card
+-------
+Size: 10.38 GB
+
+*****
+
+lux2_en_ml8_13_10_21_ics.exe
+============================
+Model: LUX2 ML8
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, grammar_enml,
+    grammar_usml, Idioms, Irregular Verbs, jetBook Reader, Language
+    Teacher, Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-FRE, MT-ENG-GER, MT-ENG-ITA, MT-ENG-POL, MT-ENG-
+    POR, MT-ENG-RUS, MT-ENG-SPA, MTLauncher, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL, SpeedReading
+    Course, U-Learn, U-Learn Advanced, Universal Translator, USA
+    Interview, Video Courses 48 English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Camera, Chess, DeskClock, Dictionary
+    Online, Dominoes!, Downloads, eBay, ECTACO Market, Email, English
+    Online, ES File Explorer, Facebook, FBReader, Gallery2, Gazeta.Ru,
+    Gmail, Google Play Store, Google Talk, Google Translate, Inkpad
+    NotePad, Internet, Jibbigo Translator, K-9 Mail, MePlayer Audio,
+    Movie Studio, Music, QuickPic, Russian TV and Video, Settings,
+    Skype, SoundRecorder, SpeakingPal-EnglishTutor, Sudoku Free,
+    TalkBack, Telik_1.8, The Weather Channel, TuneIn Radio, Twitter,
+    Vkontakte, Voice Translator, VPlayer, Wikipedia, Yandex Search,
+    YouTube
+
+- Dictionary Voice: -
+- PhraseBook Voice: english, french, german, italian, polish, portuguese, russian, spanish
+- PhotoText Langs: danish, english, german, italian, polish, portuguese, russian, spanish
+- ULearn Pairs: english-french, english-german, english-italian, english-polish, english-portuguese, english-russian, english-spanish, french-english, german-english, italian-english, polish-english, portuguese-english, russian-english, spanish-english
+- ULearn-2 Pairs: english-german, english-polish, english-russian, english-spanish, german-english, polish-english, russian-english, spanish-english
+- TTS SVOX: english, french, german, italian, polish, portuguese, russian, spanish
+- Google voice typing: english
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_pl_13_09_13_ics.exe
+===========================
+Model: LUX2 EN-PL
+
+Ectaco Applications
+-------------------
+    Crossword_Eng-Pol, Dictionary_EnPl, English Dictionary in English,
+    grammar_enpl, grammar_uspl, Hangman_EnPl, Idioms, Irregular Verbs,
+    jetBook Reader, Language Teacher, Language Teacher PixWord,
+    Learning Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, MT-ENG-POL, Photo Translator, PhotoText,
+    PhraseBook, Picture Dictionary, SAT/TOEFL, SpeedReading Course,
+    ULearn-Pol-Eng, ULearn2-Pol-Eng, Universal Translator, USA
+    Interview, Video Courses 48 English Lessons
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Allegro, Android Keyboard,
+    C-Pen Core, Calculator, Calendar, Camera, Chess, DeskClock,
+    Dictionary Online, Dominoes!, Downloads, eBay, ECTACO Market,
+    Email, English Online, ES File Explorer, Facebook, FBReader,
+    Gallery2, GG, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, K-9 Mail, MePlayer Audio,
+    Movie Studio, Music, Onet News, pl.nk.m.android, Polska Prasa,
+    QuickPic, RMFon.pl, Settings, Skype, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, TalkBack, The Weather Channel, TuneIn
+    Radio, Voice Translator, VoiceSearch, VPlayer, Wikipedia, YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, polish
+- PhotoText Langs: english, polish
+- ULearn Pairs: english-polish, polish-english
+- ULearn-2 Pairs: english-polish, polish-english
+- TTS SVOX: english, polish
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_pt_13_12_16_ics.7z
+==========================
+Model: LUX2 EN-PT
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, grammar_enen, Idioms,
+    Irregular Verbs, jetBook Reader, Language Teacher, Language
+    Teacher PixWord, Learning Settings, Linguistic FlashCards,
+    Pockets, Spell-It-Right, Translation Test, Linguistic Crossword,
+    MT-ENG-POR, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SAT/TOEFL, SpeedReading Course, U-Learn, Universal
+    Translator, USA Interview, Video Courses 48 English Lessons,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, K-9 Mail, Kings, MePlayer
+    Audio, Movie Studio, Music, PocketBook Reader, Pulse, QuickPic,
+    Settings, Skype, Solitaire, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, TalkBack, The Weather Channel, TuneIn
+    Radio, Twitter, Voice Translator, VPlayer, Wikipedia, YouTube
+
+- Dictionary Voice: english, portuguese
+- PhraseBook Voice: english, portuguese
+- PhotoText Langs: english, portuguese
+- ULearn Pairs: english-portuguese, portuguese-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english, portuguese
+- Google voice typing: english, portuguese
+- Google Translate: english SD, portuguese SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 0.26 GB
+
+*****
+
+lux2_en_ro_13_08_30_ics.exe
+===========================
+Model: LUX2 EN-RO
+
+Ectaco Applications
+-------------------
+    Crossword_Eng-Rom, Dictionary_EnRo, English Dictionary in English,
+    FlashCards-Eng-Rom, Hangman_EnRo, Idioms_Eng-Rom,
+    IrregularVerbs_Eng-Rom, jetBook Reader, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL, SpeedReading
+    Course, ULearn-Rom-Eng, Universal Translator, USA Interview, Video
+    Courses 48 English Lessons
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, K-9 Mail, Kings, MePlayer
+    Audio, Movie Studio, MultiLing Keyboard, Music, Pulse, QuickPic,
+    Settings, Skype, Solitaire, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, The Weather Channel, TuneIn Radio,
+    Twitter, Voice Translator, VoiceSearch, VPlayer, Wikipedia,
+    YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, romanian
+- PhotoText Langs: english
+- ULearn Pairs: english-romanian, romanian-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_ru_13_10_10_ics.exe
+===========================
+Model: LUX2 EN-RU
+
+Ectaco Applications
+-------------------
+    Dictionary_EnRu, English Dictionary in English, grammar_enru,
+    grammar_usru, Hangman_EnRu, Idioms, Irregular Verbs, jetBook
+    Reader, Language Teacher, Language Teacher PixWord, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-RUS, Photo
+    Translator, PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL,
+    SpeedReading Course, ULearn-Rus-Eng, ULearn2-Rus-Eng, Universal
+    Translator, USA Interview
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Camera, Chess, DeskClock, Dictionary
+    Online, Dominoes!, Downloads, eBay, ECTACO Market, Email, English
+    Language Webinar, English Online, English30, ES File Explorer,
+    Facebook, FBReader, Gallery2, Gazeta.Ru, Gmail, Google Play Store,
+    Google Talk, Google Translate, Inkpad NotePad, InteractiveEnglish,
+    Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music, QuickPic,
+    Russian Books Online, Russian Translator, Russian TV and Video,
+    Settings, Skype, SoundRecorder, SpeakingPal-EnglishTutor, Sudoku
+    Free, TalkBack, Telik_1.8, The Weather Channel, TuneIn Radio,
+    Video Courses, Vkontakte, Voice Translator, VPlayer, Wikipedia,
+    Yandex Search, YouTube
+
+- Dictionary Voice: english, russian
+- PhraseBook Voice: english, russian
+- PhotoText Langs: english, russian
+- ULearn Pairs: english-russian, russian-english
+- ULearn-2 Pairs: english-russian, russian-english
+- TTS SVOX: english, russian
+- Google voice typing: english, russian
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_ru_14_03_28_jb.7z
+=========================
+Model: LUX2 EN-RU
+
+Ectaco Applications
+-------------------
+    Dictionary, Ectaco: All languages, English Dictionary in English,
+    grammar_enru, grammar_usru, Idioms, Irregular Verbs, jetBook
+    Reader, Language Teacher, Language Teacher PixWord, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-RUS, Photo
+    Translator, PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL,
+    SpeedReading Course, U-Learn, U-Learn Advanced, Universal
+    Translator, USA Interview, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Chess, ChromeBookmarksSyncAdapter,
+    DeskClock, Dictionary Online, Downloads, eBay, Email, English
+    Language Webinar, English Online, English30, ES File Explorer,
+    Exchange2, Facebook, FBReader, Gallery2, Gazeta.Ru, Gmail, Google
+    Play Store, Google Translate, GoogleCalendarSyncAdapter, Inkpad
+    NotePad, InteractiveEnglish, Internet, K-9 Mail, MePlayer Audio,
+    Movie Studio, Music, PhotoTable, QuickPic, Russian Books Online,
+    Russian Translator, Russian TV and Video, Settings, Skype,
+    SoundRecorder, SpeakingPal-EnglishTutor, Sudoku Free, TalkBack,
+    TalkJB, Telik_1.8, TuneIn Radio, Video Courses, Vkontakte, Voice
+    Translator, VoiceDialer, VPlayer, Wikipedia, Yandex Search,
+    YouTube
+
+- Dictionary Voice: english, russian
+- PhraseBook Voice: english, russian
+- PhotoText Langs: english, russian
+- ULearn Pairs: english-russian, russian-english
+- ULearn-2 Pairs: english-russian, russian-english
+- TTS SVOX: english, russian
+- Google voice typing: english, russian
+- Google Translate: english SD, russian SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 0.27 GB
+
+*****
+
+lux2_en_th_13_10_17_ics.exe
+===========================
+Model: LUX2 EN-TH
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, grammar_enen, Idioms,
+    Irregular Verbs, jetBook Reader, Language Teacher, Language
+    Teacher PixWord, Learning Settings, Linguistic FlashCards,
+    Pockets, Spell-It-Right, Translation Test, Linguistic Crossword,
+    Photo Translator, PhotoText, PhraseBook, Picture Dictionary,
+    SAT/TOEFL, SpeedReading Course, Universal Translator, USA
+    Interview, Video Courses 48 English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, Jibbigo Translator, K-9 Mail,
+    Kings, MePlayer Audio, Movie Studio, MultiLing Keyboard, Music,
+    Pulse, QuickPic, Settings, Skype, Solitaire, SoundRecorder,
+    SpeakingPal-EnglishTutor, Sudoku Free, TalkBack, The Weather
+    Channel, TuneIn Radio, Twitter, Voice Translator, VPlayer,
+    Wikipedia, YouTube
+
+- Dictionary Voice: english, thai
+- PhraseBook Voice: english, thai
+- PhotoText Langs: english, thai
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: english
+- Google Translate: -
+- Jibbigo: english, thai
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_tl_13_10_11_ics.exe
+===========================
+Model: LUX2 EN-TL
+
+Ectaco Applications
+-------------------
+    Dictionary_EnTl, English Dictionary in English, grammar_enen,
+    Hangman_EnTl, Idioms, Irregular Verbs, jetBook Reader, Learning
+    Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SAT/TOEFL, SpeedReading Course, Universal Translator,
+    USA Interview, Video Courses 48 English Lessons
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, Jibbigo Translator, K-9 Mail,
+    Kings, MePlayer Audio, Movie Studio, MultiLing Keyboard, Music,
+    Pulse, QuickPic, Settings, Skype, Solitaire, SoundRecorder,
+    SpeakingPal-EnglishTutor, Sudoku Free, TalkBack, The Weather
+    Channel, TuneIn Radio, Twitter, Voice Translator, VPlayer,
+    Wikipedia, YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, tagalog
+- PhotoText Langs: english, tagalog
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english, spanish
+- Google voice typing: english
+- Google Translate: -
+- Jibbigo: english, tagalog
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_tr_13_08_22_ics.exe
+===========================
+Model: LUX2 EN-TR
+
+Ectaco Applications
+-------------------
+    Crossword_Eng-Tur, Dictionary_EnTr, English Dictionary in English,
+    FlashCards-Eng-Tur, Hangman_EnTr, Idioms_Eng-Tur,
+    IrregularVerbs_Eng-Tur, jetBook Reader, Language Teacher, Language
+    Teacher PixWord, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SAT/TOEFL, SpeedReading Course, Universal Translator,
+    USA Interview, Video Courses 48 English Lessons
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, K-9 Mail, Kings, MePlayer
+    Audio, Messenger WithYou, Movie Studio, Music, Pulse, QuickPic,
+    Settings, Skype, Solitaire, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, The Weather Channel, TuneIn Radio,
+    Twitter, Voice Translator, VoiceSearch, VPlayer, Wikipedia,
+    YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, turkish
+- PhotoText Langs: english
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_ua_13_08_30_ics.exe
+===========================
+Model: LUX2 EN-UK
+
+Ectaco Applications
+-------------------
+    Crossword_Eng-Ukr, Dictionary_EnUk, English Dictionary in English,
+    FlashCards-Eng-Ukr, Hangman_EnUk, Idioms_Eng-Ukr,
+    IrregularVerbs_Eng-Ukr, jetBook Reader, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL, SpeedReading
+    Course, ULearn-Ukr-Eng, Universal Translator, USA Interview, Video
+    Courses 48 English Lessons
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Play Store, Google Talk, Google
+    Translate, Inkpad NotePad, Internet, K-9 Mail, Kings, MePlayer
+    Audio, Movie Studio, MultiLing Keyboard, Music, Pulse, QuickPic,
+    Settings, Skype, Solitaire, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, The Weather Channel, TuneIn Radio,
+    Twitter, Voice Translator, VoiceSearch, VPlayer, Wikipedia,
+    YouTube
+
+- Dictionary Voice: english
+- PhraseBook Voice: english, ukrainian
+- PhotoText Langs: english, ukrainian
+- ULearn Pairs: english-ukrainian, ukrainian-english
+- ULearn-2 Pairs: -
+- TTS SVOX: english
+- Google voice typing: -
+- Google Translate: -
+- Jibbigo: -
+
+SD card
+-------
+Size: -
+
+*****
+
+lux2_en_zh_13_11_08_ics.exe
+===========================
+Model: LUX2 EN-ZH
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, grammar_enen, Idioms,
+    Irregular Verbs, jetBook Reader, Language Teacher, Language
+    Teacher PixWord, Learning Settings, Linguistic FlashCards,
+    Pockets, Spell-It-Right, Translation Test, Linguistic Crossword,
+    MTLauncher, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SAT/TOEFL, SpeedReading Course, U-Learn, Universal
+    Translator, USA Interview, Video Courses 48 English Lessons,
+    Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, Badoo,
+    BBC News, Bing, C-Pen Core, Calculator, Calendar, Camera, Chess,
+    DeskClock, Dictionary Online, Dominoes!, Downloads, eBay, ECTACO
+    Market, Email, English Online, ES File Explorer, Facebook,
+    FBReader, Gallery2, Gmail, Google Cantonese Input, Google
+    Keyboard, Google Pinyin Input, Google Play Store, Google Talk,
+    Google Translate, Google Zhuyin Input, Inkpad NotePad, Internet,
+    Jibbigo Translator, K-9 Mail, Kings, MePlayer Audio, Movie Studio,
+    Music, Pulse, QuickPic, Settings, Skype, Solitaire, SoundRecorder,
+    SpeakingPal-EnglishTutor, Sudoku Free, TalkBack, The Weather
+    Channel, TuneIn Radio, Twitter, Voice Translator, VPlayer,
+    Wikipedia, YouTube
+
+- Dictionary Voice: chinese, english
+- PhraseBook Voice: chinese, english
+- PhotoText Langs: chinese, english
+- ULearn Pairs: chinese-english, english-chinese
+- ULearn-2 Pairs: -
+- TTS SVOX: chinese, english
+- Google voice typing: english
+- Google Translate: chinese SD, english SD
+- Jibbigo: chinese, english
+
+SD card
+-------
+Size: 0.26 GB
+
+*****
+
+lux2_es_ml6_14_08_15_testing.7z
+===============================
+Model: LUX2 ML6-ES
+
+Ectaco Applications
+-------------------
+    Dictionary, Ectaco: All languages, English Dictionary in English,
+    English Dictionary in Spanish, grammar_enml, Idioms, Irregular
+    Verbs, jetBook Reader, Language Teacher, Language Teacher PixWord,
+    Learning Settings, Linguistic FlashCards, Pockets, Spell-It-Right,
+    Translation Test, Linguistic Crossword, MT-ENG-POL, MT-ENG-RUS,
+    MT-ENG-SPA, MTLauncher, Photo Translator, PhotoText, PhraseBook,
+    Picture Dictionary, SAT/TOEFL, SpeedReading Course, U-Learn,
+    U-Learn Advanced, Universal Translator, USA Interview, Video
+    Courses 48 English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Chess, DeskClock, Dictionary Online,
+    Downloads, eBay, Email, English Online, ES File Explorer,
+    Facebook, FBReader, Gallery2, Gmail, Google Keyboard, Google
+    Korean Input, Google Pinyin Input, Google Play Store, Google
+    Translate, Inkpad NotePad, Internet, Jibbigo Translator, K-9 Mail,
+    MePlayer Audio, Movie Studio, Music, PhotoTable, QuickPic, Skype,
+    SoundRecorder, Sudoku Free, TalkBack, TalkJB, The Weather Channel,
+    TuneIn Radio, Twitter, Voice Translator, VoiceDialer, VPlayer,
+    Wikipedia, YouTube
+
+- Dictionary Voice: chinese, english, korean, russian, spanish
+- PhraseBook Voice: chinese, english, korean, polish, russian, spanish
+- PhotoText Langs: chinese, english, korean, polish, russian, spanish
+- ULearn Pairs: chinese-spanish, english-spanish, korean-spanish, polish-spanish, russian-spanish, spanish-chinese, spanish-english, spanish-korean, spanish-polish, spanish-russian
+- ULearn-2 Pairs: english-spanish, spanish-english
+- TTS SVOX: chinese, english, korean, polish, russian, spanish
+- Google voice typing: english, korean, russian, spanish
+- Google Translate: chinese SD, english SD, korean SD, polish SD, russian SD, spanish SD
+- Jibbigo: chinese SD, english SD, korean SD, russian SD, spanish SD
+
+SD card
+-------
+Size: 2.83 GB
+
+*****
+
+lux2_pl_ml8_14_04_08_jb.7z
+==========================
+Model: LUX2 ML8-PL
+
+Ectaco Applications
+-------------------
+    Dictionary, Ectaco: All languages, English Dictionary in English,
+    grammar_enpl, grammar_uspl, jetBook Reader, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-POL, MT-Pol-Fre, MT-Pol-Ger, MT-Pol-Ita, MT-Por-
+    Pol, MT-Rus-Pol, MT-Spa-Pol, MTLauncher, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL, SpeedReading
+    Course, U-Learn, U-Learn Advanced, Universal Translator, USA
+    Interview, Video Courses 48 English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Allegro, Android Keyboard,
+    C-Pen Core, Calculator, Calendar, Chess,
+    ChromeBookmarksSyncAdapter, DeskClock, Dictionary Online,
+    Downloads, eBay, Email, English Online, ES File Explorer,
+    Exchange2, Facebook, FBReader, Gallery2, GG, Gmail, Google Play
+    Store, Google Translate, GoogleCalendarSyncAdapter, Inkpad
+    NotePad, Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music,
+    Onet News, PhotoTable, pl.nk.m.android, Polska Prasa, QuickPic,
+    RMFon.pl, Settings, Skype, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, TalkBack, TalkJB, TuneIn Radio,
+    Twitter, Voice Translator, VoiceDialer, VPlayer, Wikipedia,
+    YouTube
+
+- Dictionary Voice: english SD, french SD, german SD, italian SD, portuguese SD, russian SD, spanish SD
+- PhraseBook Voice: english, french, german, italian, polish, portuguese, russian, spanish
+- PhotoText Langs: english, german, italian, polish, portuguese, russian, spanish
+- ULearn Pairs: english-polish, french-polish, german-polish, italian-polish, polish-english, polish-french, polish-german, polish-italian, polish-portuguese, polish-russian, polish-spanish, portuguese-polish, russian-polish, spanish-polish
+- ULearn-2 Pairs: english-polish, polish-english
+- TTS SVOX: english, french, german, italian, polish, portuguese, russian, spanish
+- Google voice typing: english, french, german, italian, portuguese, russian, spanish
+- Google Translate: english SD, french SD, german SD, italian SD, polish SD, portuguese SD, russian SD, spanish SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 3.01 GB
+
+*****
+
+lux2_ru_es_13_11_14_ics.exe
+===========================
+Model: LUX2 RU-ES
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, jetBook Reader,
+    Language Teacher, Language Teacher PixWord, Learning Settings,
+    Linguistic FlashCards, Pockets, Spell-It-Right, Translation Test,
+    Linguistic Crossword, MT-Spa-Rus, Photo Translator, PhotoText,
+    PhraseBook, Picture Dictionary, SpeedReading Course, Universal
+    Translator, Video Courses 48 English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Camera, Chess, DeskClock, Dictionary
+    Online, Dominoes!, Downloads, eBay, ECTACO Market, Email, English
+    Online, ES File Explorer, Facebook, FBReader, Gallery2, Gazeta.Ru,
+    Gmail, Google Play Store, Google Talk, Google Translate, Inkpad
+    NotePad, Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music,
+    QuickPic, Russian Books Online, Russian TV and Video, Settings,
+    Skype, SoundRecorder, SpeakingPal-EnglishTutor, Sudoku Free,
+    TalkBack, Telik_1.8, The Weather Channel, TuneIn Radio, Vkontakte,
+    Voice Translator, VPlayer, Wikipedia, Yandex Search, YouTube
+
+- Dictionary Voice: english, russian, spanish
+- PhraseBook Voice: russian, spanish
+- PhotoText Langs: russian, spanish
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english, russian, spanish
+- Google voice typing: russian, spanish
+- Google Translate: english SD, russian SD, spanish SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 0.48 GB
+
+*****
+
+lux2_ru_fr_13_11_13_ics.exe
+===========================
+Model: LUX2 RU-FR
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, jetBook Reader,
+    Language Teacher, Language Teacher PixWord, Learning Settings,
+    Linguistic FlashCards, Pockets, Spell-It-Right, Translation Test,
+    Linguistic Crossword, MT-Rus-Fre, Photo Translator, PhotoText,
+    PhraseBook, Picture Dictionary, SpeedReading Course, Universal
+    Translator, Video Courses 48 English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Camera, Chess, DeskClock, Dictionary
+    Online, Dominoes!, Downloads, eBay, ECTACO Market, Email, English
+    Online, ES File Explorer, Facebook, FBReader, Gallery2, Gazeta.Ru,
+    Gmail, Google Play Store, Google Talk, Google Translate, Inkpad
+    NotePad, Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music,
+    QuickPic, Russian Books Online, Russian TV and Video, Settings,
+    Skype, SoundRecorder, SpeakingPal-EnglishTutor, Sudoku Free,
+    TalkBack, Telik_1.8, The Weather Channel, TuneIn Radio, Vkontakte,
+    Voice Translator, VPlayer, Wikipedia, Yandex Search, YouTube
+
+- Dictionary Voice: english, french, russian
+- PhraseBook Voice: french, russian
+- PhotoText Langs: russian
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english, french, russian
+- Google voice typing: french, russian
+- Google Translate: english SD, french SD, russian SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 0.48 GB
+
+*****
+
+lux2_ru_it_13_11_13_ics.exe
+===========================
+Model: LUX2 RU-IT
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, jetBook Reader,
+    Language Teacher, Language Teacher PixWord, MT-Rus-Ita, Photo
+    Translator, PhotoText, PhraseBook, Picture Dictionary,
+    SpeedReading Course, Universal Translator, Video Courses 48
+    English Lessons, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Camera, Chess, DeskClock, Dictionary
+    Online, Dominoes!, Downloads, eBay, ECTACO Market, Email, English
+    Online, ES File Explorer, Facebook, FBReader, Gallery2, Gazeta.Ru,
+    Gmail, Google Play Store, Google Talk, Google Translate, Inkpad
+    NotePad, Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music,
+    QuickPic, Russian Books Online, Russian TV and Video, Settings,
+    Skype, SoundRecorder, SpeakingPal-EnglishTutor, Sudoku Free,
+    TalkBack, Telik_1.8, The Weather Channel, TuneIn Radio, Vkontakte,
+    Voice Translator, VPlayer, Wikipedia, Yandex Search, YouTube
+
+- Dictionary Voice: english, italian, russian
+- PhraseBook Voice: italian, russian
+- PhotoText Langs: italian, russian
+- ULearn Pairs: -
+- ULearn-2 Pairs: -
+- TTS SVOX: english, italian, russian
+- Google voice typing: italian, russian
+- Google Translate: english SD, italian SD, russian SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 0.48 GB
+
+*****
+
+lux2_ru_ml10_14_07_21_jb.7z
+===========================
+Model: LUX2 ML10-RU
+
+Ectaco Applications
+-------------------
+    Dictionary, Ectaco: All languages, English Dictionary in English,
+    grammar_enru, grammar_usru, Idioms_Eng-Rus, Idioms_Ger-Rus,
+    IrregularVerbs_Eng-Rus, IrregularVerbs_Ger-Rus, jetBook Reader,
+    Language Teacher, Language Teacher PixWord, Learning Settings,
+    Linguistic FlashCards, Pockets, Spell-It-Right, Translation Test,
+    Linguistic Crossword, MT-ENG-RUS, MT-Rus-Ger, MT-Rus-Pol,
+    MTLauncher, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SAT/TOEFL, SpeedReading Course, U-Learn, U-Learn
+    Advanced, Universal Translator, USA Interview, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Chess, ChromeBookmarksSyncAdapter,
+    DeskClock, Dictionary Online, Downloads, eBay, Email, English
+    Language Webinar, English Online, English30, ES File Explorer,
+    Exchange2, Facebook, FBReader, Gallery2, Gazeta.Ru, Gmail, Google
+    Play Store, Google Translate, GoogleCalendarSyncAdapter, Inkpad
+    NotePad, InteractiveEnglish, Internet, K-9 Mail, MePlayer Audio,
+    Movie Studio, Music, PhotoTable, QuickPic, Russian Books Online,
+    Russian TV and Video, Settings, Skype, SoundRecorder, SpeakingPal-
+    EnglishTutor, Sudoku Free, TalkBack, TalkJB, Telik_1.8, TuneIn
+    Radio, Video Courses, Vkontakte, Voice Translator, VoiceDialer,
+    VPlayer, Wikipedia, Yandex Search, YouTube
+
+- Dictionary Voice: english SD, german SD, russian SD
+- PhraseBook Voice: english, estonian, finnish, german, latvian, lithuanian, norwegian, polish, russian, swedish
+- PhotoText Langs: english, estonian, finnish, german, lithuanian, polish, russian, swedish
+- ULearn Pairs: english-russian, german-russian, polish-russian, russian-english, russian-german, russian-polish
+- ULearn-2 Pairs: english-russian, german-russian, russian-english, russian-german
+- TTS SVOX: english, german, polish, russian
+- Google voice typing: english, german, russian
+- Google Translate: english SD, estonian SD, finnish SD, german SD, latvian SD, lithuanian SD, polish SD, russian SD, swedish SD, unknown SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 3.09 GB
+
+*****
+
+lux2_ru_ml14_14_03_13_jb.7z
+===========================
+Model: LUX2 ML14-RU
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, grammar_enru,
+    grammar_usru, Idioms_Eng-Rus, Idioms_Ger-Rus, IrregularVerbs_Eng-
+    Rus, IrregularVerbs_Ger-Rus, jetBook Reader, Language Teacher,
+    Language Teacher PixWord, Learning Settings, Linguistic
+    FlashCards, Pockets, Spell-It-Right, Translation Test, Linguistic
+    Crossword, MT-ENG-RUS, MT-Rus-Fre, MT-Rus-Ger, MT-Rus-Ita, MT-Rus-
+    Pol, MT-Rus-Por, MT-Spa-Rus, MTLauncher, Photo Translator,
+    PhotoText, PhraseBook, Picture Dictionary, SAT/TOEFL, SpeedReading
+    Course, U-Learn, U-Learn Advanced, Universal Translator, USA
+    Interview, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Chess, ChromeBookmarksSyncAdapter,
+    DeskClock, Dictionary Online, Downloads, eBay, ECTACO Market,
+    Email, English Language Webinar, English Online, English30, ES
+    File Explorer, Exchange2, Facebook, FBReader, Gallery2, Gazeta.Ru,
+    Gmail, Google Pinyin Input, Google Play Store, Google Translate,
+    GoogleCalendarSyncAdapter, Inkpad NotePad, InteractiveEnglish,
+    Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music,
+    PhotoTable, QuickPic, Russian Books Online, Russian TV and Video,
+    Settings, Skype, SoundRecorder, SpeakingPal-EnglishTutor, Sudoku
+    Free, TalkBack, TalkJB, Telik_1.8, TuneIn Radio, Video Courses,
+    Vkontakte, Voice Translator, VoiceDialer, VPlayer, Wikipedia,
+    Yandex Search, YouTube
+
+- Dictionary Voice: chinese SD, english SD, french SD, german SD, italian SD, portuguese SD, russian SD, spanish SD
+- PhraseBook Voice: armenian SD, chinese SD, english SD, estonian SD, finnish SD, french SD, german SD, hebrew SD, italian SD, polish SD, portuguese SD, russian SD, spanish SD, turkish SD
+- PhotoText Langs: chinese, english, estonian, finnish, german, hebrew, italian, polish, portuguese, russian, spanish, turkish
+- ULearn Pairs: english-russian, french-russian, german-russian, polish-russian, portuguese-russian, russian-english, russian-french, russian-german, russian-polish, russian-portuguese, russian-spanish, spanish-russian
+- ULearn-2 Pairs: english-russian, german-russian, russian-english, russian-german
+- TTS SVOX: english, french, german, italian, polish, portuguese, russian, spanish
+- Google voice typing: english, french, german, italian, portuguese, russian, spanish
+- Google Translate: chinese SD, english SD, estonian SD, finnish SD, french SD, german SD, hebrew SD, italian SD, polish SD, portuguese SD, russian SD, spanish SD, turkish SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 5.13 GB
+
+*****
+
+lux2_ru_ml8_13_12_20_ics.7z
+===========================
+Model: LUX2 ML8-RU
+
+Ectaco Applications
+-------------------
+    Dictionary, English Dictionary in English, grammar_enru,
+    grammar_usru, jetBook Reader, Language Teacher, Language Teacher
+    PixWord, Learning Settings, Linguistic FlashCards, Pockets, Spell-
+    It-Right, Translation Test, Linguistic Crossword, MT-ENG-RUS, MT-
+    Rus-Fre, MT-Rus-Ger, MT-Rus-Ita, MT-Rus-Pol, MT-Rus-Por, MT-Spa-
+    Rus, MTLauncher, Photo Translator, PhotoText, PhraseBook, Picture
+    Dictionary, SAT/TOEFL, SpeedReading Course, U-Learn, U-Learn
+    Advanced, Universal Translator, USA Interview, Vocabulary Builder
+
+3rd party Applications
+----------------------
+    Adobe Flash Player 11.1, Adobe Reader, Android Keyboard, C-Pen
+    Core, Calculator, Calendar, Camera, Chess, DeskClock, Dictionary
+    Online, Dominoes!, Downloads, eBay, ECTACO Market, Email, English
+    Language Webinar, English Online, English30, ES File Explorer,
+    Facebook, FBReader, Gallery2, Gazeta.Ru, Gmail, Google Play Store,
+    Google Talk, Google Translate, Inkpad NotePad, InteractiveEnglish,
+    Internet, K-9 Mail, MePlayer Audio, Movie Studio, Music,
+    PocketBook Reader, QuickPic, Russian Books Online, Russian TV and
+    Video, Settings, Skype, SoundRecorder, SpeakingPal-EnglishTutor,
+    Sudoku Free, TalkBack, Telik_1.8, The Weather Channel, TuneIn
+    Radio, Video Courses, Vkontakte, Voice Translator, VPlayer,
+    Wikipedia, Yandex Search, YouTube
+
+- Dictionary Voice: english SD, french SD, german SD, italian SD, portuguese SD, russian SD, spanish SD
+- PhraseBook Voice: english, french, german, italian, polish, portuguese, russian, spanish
+- PhotoText Langs: english, german, italian, polish, portuguese, russian, spanish
+- ULearn Pairs: english-russian, german-russian, russian-english, russian-german
+- ULearn-2 Pairs: english-russian, german-russian, russian-english, russian-german
+- TTS SVOX: english, french, german, italian, polish, portuguese, russian, spanish
+- Google voice typing: english, french, german, italian, portuguese, russian, spanish
+- Google Translate: english SD, french SD, german SD, italian SD, polish SD, portuguese SD, russian SD, spanish SD
+- Jibbigo: -
+
+SD card
+-------
+Size: 3.38 GB
+
+*****
+
