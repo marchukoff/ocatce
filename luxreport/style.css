@@ -1,0 +1,27 @@
+body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #393939;
+}
+td {
+    font-size: 12px;
+    border: 1px solid silver;
+    vertical-align: top;
+    padding: 5px;
+}
+.header {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f6f6f6;
+    background-color: #23719f;
+}
+.header2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f6f6f6;
+    background-color: #46b946;
+}
+.dimmed {
+    background-color: #dbdbdb;
+}
