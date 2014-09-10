@@ -48,16 +48,17 @@ logger.addHandler(ch)
 
 
 class Settings(object):
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+    home = os.path.dirname(__file__)
+    with open(os.path.abspath(os.path.join(home,
                      'luxreport_tasks.json'))) as fp:
         tasks = json.load(fp)
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+    with open(os.path.abspath(os.path.join(home,
                          'luxreport_blacklog.json'))) as fp:
         blacklog = set(json.load(fp))        
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+    with open(os.path.abspath(os.path.join(home,
                          'luxreport_ectaco.json'))) as fp:
         suite = set(json.load(fp))
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__),
+    with open(os.path.abspath(os.path.join(home,
                          'luxreport_appnames.json'))) as fp:
         appnames = json.load(fp)        
     lang_ext_gtlang = re.compile(r'c_(\w\w)_(\w\w)\.txt')
@@ -668,35 +669,7 @@ class ReleaseCollection(dict):
     _TESTING = re.compile('(eval|test)', re.IGNORECASE)
     _LUX = 'ftp://backbsd.ectaco.ru/Lux'
     _SG = 'ftp://backbsd.ectaco.ru/Runbo'
-    _CSS_style = """
-body {
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    color: #393939;
-}
-td {
-    font-size: 12px;
-    border: 1px solid silver;
-    vertical-align: top;
-    padding: 5px;
-}
-.header {
-    font-size: 14px;
-    font-weight: bold;
-    color: #f6f6f6;
-    background-color: #23719f;
-}
-.header2 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #f6f6f6;
-    background-color: #46b946;
-}
-.dimmed {
-    background-color: #dbdbdb;
-}
-"""
+
 
     # noinspection PyMethodOverriding
     def values(self):
@@ -758,6 +731,15 @@ td {
             logger.info('Export data to "%s"' % os.path.basename(filename))
             call[ext](filename)
             if os.access(filename, os.F_OK):
+                if ext in ('.xml', '.htm', '.html'):
+                    css = 'style.css'
+                    if not os.access(os.path.join(
+                            os.path.dirname(filename), css), os.F_OK):
+                        try:
+                            shutil.copy(os.path.join(Settings.home, css),
+                                os.path.join(os.path.dirname(filename), css))
+                        except OSError as err:
+                            logger.error("OS error: {0}".format(err))
                 return True
             else:
                 logger.warning('The "%s" was not exported.' % filename)
@@ -906,11 +888,12 @@ Size: {0.sd_size}
 <xsl:template match="/">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Releases</title>
-        <style type="text/css">
-            {css}
-        </style>
+        <meta http-equiv="content-language" content="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="Content-Script-Type" content="application/javascript" />
+        <link rel="stylesheet" href="style.css" />
     </head>
         <body>
             <table>
@@ -980,7 +963,7 @@ Size: {0.sd_size}
 <xsl:template match="sdcard">
     <td class="dimmed"><xsl:value-of select="@sd_size"/></td>
 </xsl:template>
-</xsl:stylesheet>""".format(css=ReleaseCollection._CSS_style)
+</xsl:stylesheet>"""
         with open(filename, mode='w') as fp:
             fp.write(xslt)
 
@@ -1053,12 +1036,14 @@ Size: {0.sd_size}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head><title>Release Summary</title>
-<meta equiv="content-type" content="text/html; charset=utf-8" />
-<style>
-{css}
-</style></head><body>
+<meta http-equiv="content-language" content="en" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="application/javascript" />
+<link rel="stylesheet" href="style.css" />
+</head><body>
 <h3>Release Summary</h3>
-<table>""".format(css=self._CSS_style)
+<table>"""
         table_header = """<tr>
 <td class="header">No.</td>
 <td class="header">File Name</td>
