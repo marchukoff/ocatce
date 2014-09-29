@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright (c) 2014 Eugene Marchukov
+# Copyright (c) 2014 Ngeniy
 # 
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
 # 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
 # 
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# 
 import functools
 import logging
 import os
@@ -71,7 +71,7 @@ BAT_SD = """
 @echo off
 set TEMP=c:\Temp
 set SRC={src}
-set SD=e:
+set SD=E:
 set DST=%SD%\sdfuse
 set KEYS=/S /E /H /Y /exclude:noneed.txt
 rem noneed.txt contains
@@ -86,14 +86,20 @@ cls
 title Writing SDFUSE
 md %DST%
 xcopy %SRC%\*.* %DST% %KEYS%
-REM pause
+echo
+echo Insert a new SD for DATE and/or press any key to continue
+pause
 title Writing SDCARD
-for %%I in (%SRC%\*.tar %SRC%\*.zip) do (
+for %%I in (%SRC%\*.tar %SRC%\*.zip %SRC%\*.gz) do (
     md %TEMP%\SD
     %EXTRACT% x %%I -y -o%TEMP%\SD
+    for %%J in (%TEMP%\SD\*.tar) do (
+    %EXTRACT% x %%J -y -o%TEMP%\SD
+    del /F /Q %%J
+    )
     xcopy %TEMP%\SD\*.* %SD%\ %KEYS%
     rd /S /Q %TEMP%\SD
-    )
+)
 :bye
 exit
 """
