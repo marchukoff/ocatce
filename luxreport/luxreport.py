@@ -669,6 +669,7 @@ class ReleaseCollection(dict):
     _TESTING = re.compile('(eval|test)', re.IGNORECASE)
     _LUX = 'ftp://backbsd.ectaco.ru/Lux'
     _SG = 'ftp://backbsd.ectaco.ru/Runbo'
+    _PEFIXES = ('lux', 'sg')
 
 
     # noinspection PyMethodOverriding
@@ -1102,7 +1103,8 @@ Size: {0.sd_size}
     def __import_dir(self, folder):
         self.clear()
         files = (os.path.join(folder, f) for f in
-                 os.listdir(folder) if f.lower().startswith(("lux2_", "sg_")))
+                 os.listdir(folder) if f.lower().startswith(
+                        ReleaseCollection._PEFIXES))
         logger.info('Analyze folder "%s"' % os.path.basename(folder))
         for f in files:
             self.__import_file(f)
@@ -1122,7 +1124,8 @@ Size: {0.sd_size}
             self.import_(filename)
             keys = set(self.keys())
             files = {f for f in
-                 os.listdir(folder) if f.lower().startswith(("lux2_", "sg_"))}
+                 os.listdir(folder) if f.lower().startswith(
+                        ReleaseCollection._PEFIXES)}
             if keys > files:
                 for k in (k for k in self.keys() if k not in files):
                     self.pop(k, None)
