@@ -453,8 +453,12 @@ class Analizer(object):
                         self._scan(img, data)
                     continue
                 elif f == "build.prop":
-                    data['project_model'] = Analizer._get_project_model(
+                    try:
+                        data['project_model'] = Analizer._get_project_model(
                                                     os.path.join(root, f))
+                    except OSError as e:
+                        data['project_model'] = 'unknown'
+                        logger.error(e)
                 elif f == 'sdcard.zip':
                     with TempDir(path) as sdcard:
                         os.system('unzip %s -d %s >/dev/null 2>&1' %
