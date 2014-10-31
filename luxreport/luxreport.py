@@ -1152,6 +1152,8 @@ Size: {0.sd_size}
 
 
 def main():
+    home = os.path.dirname(__file__)
+    os.chdir(os.path.abspath(home))
     for i in Settings.tasks:
         task = ReleaseCollection()
         task.refresh(i, Settings.tasks[i])
