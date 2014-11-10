@@ -33,6 +33,7 @@ import xml.sax.saxutils
 
 from functools import wraps
 
+
 # It's logger and I've use it instead of print.
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -46,9 +47,13 @@ ch.setLevel(logging.DEBUG)
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
+HOME = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HOME)
+os.chdir(HOME)
+
 
 class Settings(object):
-    home = os.path.dirname(__file__)
+    home = HOME
     with open(os.path.abspath(os.path.join(home,
                      'luxreport_tasks.json'))) as fp:
         tasks = json.load(fp)
@@ -1152,8 +1157,6 @@ Size: {0.sd_size}
 
 
 def main():
-    home = os.path.dirname(__file__)
-    os.chdir(os.path.abspath(home))
     for i in Settings.tasks:
         task = ReleaseCollection()
         task.refresh(i, Settings.tasks[i])
